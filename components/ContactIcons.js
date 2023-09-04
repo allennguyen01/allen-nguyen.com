@@ -17,7 +17,7 @@ export default function ContactIcons() {
       link: 'https://www.linkedin.com/in/allendnguyen/',
     },
     {
-      name: 'gitHub',
+      name: 'github',
       icon: <RiGithubFill size={iconSize} />,
       link: 'https://github.com/allennguyen01/',
     },
