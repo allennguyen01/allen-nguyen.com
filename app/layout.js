@@ -15,12 +15,13 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className}`}>
         <nav className='flex justify-between gap-4 m-4'>
           <Link href='/'>Allen Nguyen</Link>
-          <div className='flex gap-4'>
-            <Link href='/projects'>Projects</Link>
-            <Link href='/contact'>Contact</Link>
-          </div>
+          <Link href='/projects'>Projects</Link>
         </nav>
         {children}
+
+        <footer className='text-sm m-4'>
+          <p>Ⓒ 2023 Allen Nguyen, Vancouver Canada</p>
+        </footer>
       </body>
     </html>
   );
