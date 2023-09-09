@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-import UCalgaryCSSMobile from '../../public/images/projects/ucalgary-css/css-phone-homepage.jpg';
 import UCalgaryCSSDesktop from '../../public/images/projects/ucalgary-css/css-desktop-homepage.jpg';
 
 import cgClosetScreen from '../../public/images/projects/closetgenie/closet-screen.png';
