@@ -9,6 +9,8 @@ import cgProfileScreen from '../../public/images/projects/closetgenie/profile-sc
 
 import seekicksWebpage from '../../public/images/projects/seekicks/webpage.jpg';
 
+import slientOwlApp from '../../public/images/projects/silent-owl/silent-owl.png';
+
 const techBadges = {
   'React.js':
     'https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB',
@@ -37,6 +39,13 @@ const techBadges = {
     'https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white',
   NumPy:
     'https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white',
+  'Node.js':
+    'https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white',
+  MongoDB:
+    'https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white',
+  'Express.js':
+    'https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB',
+  Java: 'https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white',
 };
 
 export default function Projects() {
@@ -66,14 +75,19 @@ export default function Projects() {
     'NumPy',
   ];
 
-  function UCalgaryCSSPreviewImg() {
-    return (
-      <Image
-        src={UCalgaryCSSDesktop}
-        alt='Desktop view of UCalgary Chinese Students Society Website'
-        className='rounded-xl'
-      />
-    );
+  const onlineForumTechStack = [
+    'JavaScript',
+    'HTML',
+    'CSS',
+    'Node.js',
+    'Express.js',
+    'MongoDB',
+  ];
+
+  const silentOwlTechStack = ['Java'];
+
+  function SinglePreviewImg({ src, alt }) {
+    return <Image src={src} alt={alt} className='rounded-xl' />;
   }
 
   function ClosetGeniePreviewImg() {
@@ -112,23 +126,18 @@ export default function Projects() {
     );
   }
 
-  function SeeKicksPreviewImg() {
-    return (
-      <Image
-        src={seekicksWebpage}
-        alt='SeeKick webpage'
-        className='rounded-xl'
-      />
-    );
-  }
-
   return (
     <main className='flex min-h-screen flex-col items-center justify-center m-8 gap-8'>
-      <h1 className='text-4xl font-bold'>projects</h1>
+      <h1 className='text-4xl font-bold'>projects 📚</h1>
       <Project
         title={"University of Calgary Chinese Students' Society"}
         projectType={'Business website'}
-        previewImages={<UCalgaryCSSPreviewImg />}
+        previewImages={
+          <SinglePreviewImg
+            src={UCalgaryCSSDesktop}
+            alt='Desktop view of UCalgary Chinese Students Society Website'
+          />
+        }
         websiteLink={'https://ucalgarycss.com/'}
         githubLink={'https://github.com/allennguyen01/ucalgary-css'}
         summaryPoints={[
@@ -155,10 +164,26 @@ export default function Projects() {
         datesWorked={'Jan - Apr 2023'}
       />
 
+      {/* <Project
+        title={'Online Discussion Forum'}
+        projectType={'Full Stack Web App'}
+        previewImages={<SinglePreviewImg />}
+        githubLink={'https://github.com/allennguyen01/chat-app'}
+        summaryPoints={[
+          'Built a single-page dynamically rendered web frontend using HTML and CSS following a MVC pattern and object-oriented programming',
+          'Implemented the client-side and server-side functionalities with RESTful API endpoints using JavaScript, Node.js, and Express.js',
+          'Programmed the app to store and retain chat messages data in a MongoDB non-relational database',
+        ]}
+        techStack={onlineForumTechStack}
+        datesWorked={'Sept - Dec 2021'}
+      /> */}
+
       <Project
         title={'SeeKicks'}
         projectType={'Machine learning application'}
-        previewImages={<SeeKicksPreviewImg />}
+        previewImages={
+          <SinglePreviewImg src={seekicksWebpage} alt='SeeKick webpage' />
+        }
         githubLink={'https://github.com/allennguyen01/SeeKicks'}
         summaryPoints={[
           'Implemented a machine learning image recognition app that identifies over 850 sneaker models with 98% accuracy',
@@ -167,6 +192,25 @@ export default function Projects() {
         ]}
         techStack={seekicksTechStack}
         datesWorked={'Jan - Apr 2021'}
+      />
+
+      <Project
+        title={'Silent Owl'}
+        projectType={'BC Hacks 2.0 Hackathon Project'}
+        previewImages={
+          <SinglePreviewImg
+            src={slientOwlApp}
+            alt='Silent Owl desktop application'
+          />
+        }
+        githubLink={'https://github.com/allennguyen01/Silent-Owl'}
+        summaryPoints={[
+          "Developed a Java app that listens to a user's microphone and alerts them if they are being too loud",
+          'Integrated a user-friendly GUI with a Java Swing frontend and backend using Java Sound API',
+          'Awarded top 3 in first-time hackers category',
+        ]}
+        techStack={silentOwlTechStack}
+        datesWorked={'Feb 2021'}
       />
     </main>
   );
