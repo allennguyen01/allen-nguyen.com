@@ -2,10 +2,16 @@ import Image from 'next/image';
 import ContactIcons from '@/components/ContactIcons';
 import SkillIcons from '@/components/SkillIcons';
 
+import { Barlow } from 'next/font/google';
+
+const barlow = Barlow({ weight: '700', subsets: ['latin'] });
+
 export default function Home() {
   return (
     <main className='flex min-h-screen flex-col justify-center items-center m-8 gap-8 text-center'>
-      <h1 className='font-semibold text-4xl'>hey, I&apos;m Allen 👋</h1>
+      <h1 className={`${barlow.className} font-semibold text-4xl`}>
+        hey, I&apos;m Allen 👋
+      </h1>
       <p>
         computer engineering @ ubc
         <br />
@@ -22,7 +28,9 @@ export default function Home() {
       />
 
       <div className='flex flex-col gap-2'>
-        <h1 className='text-xl font-semibold'>about me</h1>
+        <h1 className={`${barlow.className} text-2xl font-semibold`}>
+          about me
+        </h1>
         <p className='text-left text-base max-w-lg'>
           I am a self-motivated computer engineering student in my fourth year
           at the University of British Columbia. I am passionate about using
@@ -49,12 +57,14 @@ export default function Home() {
       </div>
 
       <div className='flex flex-col gap-2'>
-        <h1 className='text-xl font-semibold'>contact me!</h1>
+        <h1 className={`${barlow.className} text-2xl font-semibold`}>
+          contact me!
+        </h1>
         <ContactIcons />
       </div>
 
       <div>
-        <h1 className='text-xl font-semibold'>skills</h1>
+        <h1 className={`${barlow.className} text-2xl font-semibold`}>skills</h1>
         <div>
           <SkillIcons />
         </div>
