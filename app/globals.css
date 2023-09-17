@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+h1 {
+  @apply font-barlow text-4xl lg:text-6xl font-bold;
+}
+
 h2 {
-  @apply text-2xl lg:text-4xl font-semibold;
+  @apply font-barlow text-2xl lg:text-4xl font-semibold;
 }
