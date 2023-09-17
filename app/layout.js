@@ -20,7 +20,9 @@ export default function RootLayout({ children }) {
           <Link href='/' className='flex items-center gap-2'>
             <Image src={miiHeadshot} alt='Allen as a Mii' className='w-14' />
           </Link>
-          <Link href='/projects'>Projects</Link>
+          <section className='flex gap-4'>
+            <Link href='/projects'>projects</Link>
+          </section>
         </nav>
         {children}
 

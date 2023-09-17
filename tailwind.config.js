@@ -22,5 +22,9 @@ module.exports = {
       addVariant('child', '& > *');
       addVariant('child-hover', '& > *:hover');
     },
+    require('daisyui'),
   ],
+  daisyui: {
+    themes: ['business'],
+  },
 };

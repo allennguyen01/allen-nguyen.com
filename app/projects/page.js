@@ -143,7 +143,7 @@ export default function Projects() {
             alt='Desktop view of UCalgary Chinese Students Society Website'
           />
         }
-        websiteLink={'https://ucalgarycss.com/'}
+        previewLink={'https://ucalgarycss.com/'}
         githubLink={'https://github.com/allennguyen01/ucalgary-css'}
         summaryPoints={[
           'Develop a website to display information regarding club events, member/executive recruitment, and community engagement resources',
@@ -225,7 +225,7 @@ function Project({
   title,
   projectType,
   previewImages,
-  websiteLink = '',
+  previewLink = '',
   githubLink,
   summaryPoints,
   techStack,
@@ -240,9 +240,8 @@ function Project({
 
       <section className='flex flex-wrap gap-2'>{previewImages}</section>
 
-      <section className='flex text-lg justify-evenly font-semibold'>
-        {websiteLink ? <a href={websiteLink}>Live preview -&gt;</a> : ''}
-        <a href={githubLink}>View code -&gt;</a>
+      <section className='flex flex-row text-lg justify-evenly font-semibold'>
+        <ProjectButtons previewLink={previewLink} githubLink={githubLink} />
       </section>
 
       <section>
@@ -275,13 +274,23 @@ function Project({
           Date <span className='text-gray-400'>{datesWorked}</span>
         </p>
       </section>
-
-      {/* <ProjectButtons
-          codeLink={'https://github.com/allennguyen01/ucalgary-css'}
-          previewLink={'https://ucalgarycss.com/'}
-          // codeLink={''}
-          // previewLink={''}
-        /> */}
     </article>
+  );
+}
+
+function ProjectButtons({ previewLink, githubLink }) {
+  return (
+    <section className='flex gap-4'>
+      {previewLink ? (
+        <button className='btn btn-primary rounded-xl'>
+          <a href={previewLink}>Live preview -&gt;</a>
+        </button>
+      ) : (
+        <></>
+      )}
+      <button className='btn btn-secondary rounded-xl'>
+        <a href={githubLink}>View code -&gt;</a>
+      </button>
+    </section>
   );
 }
