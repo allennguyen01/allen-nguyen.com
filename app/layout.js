@@ -15,13 +15,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
         <nav className='flex justify-between items-center gap-4 my-4 mx-4 lg:mx-56 text-lg font-medium'>
           <Link href='/' className='flex items-center gap-2'>
             <Image src={miiHeadshot} alt='Allen as a Mii' className='w-14' />
           </Link>
           <section className='flex gap-4'>
             <Link href='/projects'>projects</Link>
+            <Link href='/experience'>experience</Link>
           </section>
         </nav>
         {children}
