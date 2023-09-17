@@ -65,9 +65,9 @@ export default function SkillIcons() {
 
 function SkillType({ type, skills }) {
   const gridVariants = {
-    'frameworks-libraries': 'grid-rows-2 grid-cols-4',
-    languages: 'grid-rows-2 grid-cols-3',
-    tools: 'grid-rows-2 grid-cols-3',
+    'frameworks-libraries': 'grid-cols-4 lg:grid-cols-8',
+    languages: 'grid-cols-3 lg:grid-cols-6',
+    tools: 'grid-cols-3 lg:grid-cols-6',
   };
 
   return (
@@ -78,14 +78,14 @@ function SkillType({ type, skills }) {
           <motion.div
             key={s.name}
             whileHover={{ scale: 1.2 }}
-            className='flex flex-col justify-start w-14'
+            className='flex flex-col items-center justify-center'
           >
             <Image
               src={s.image}
               alt={`${s.name} logo`}
-              className='bg-white p-1 object-contain rounded-xl w-14 h-14'
+              className='bg-white p-1 object-contain rounded-xl w-14 h-14 lg:w-16 lg:h-16'
             />
-            <p className='text-xs'>{s.name}</p>
+            <p className='text-xs lg:text-sm'>{s.name}</p>
           </motion.div>
         ))}
       </div>

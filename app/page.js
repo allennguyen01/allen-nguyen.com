@@ -8,11 +8,11 @@ const barlow = Barlow({ weight: '700', subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col justify-center items-center m-8 gap-8 text-center'>
-      <h1 className={`${barlow.className} font-semibold text-4xl`}>
+    <main className='flex min-h-screen flex-col justify-center items-center m-8 gap-8 text-center text-base lg:text-lg'>
+      <h1 className={`${barlow.className} font-semibold text-4xl lg:text-6xl`}>
         hey, I&apos;m Allen 👋
       </h1>
-      <p>
+      <p className='lg:text-xl'>
         computer engineering @ ubc
         <br />
         📍 vancouver, canada
@@ -28,10 +28,8 @@ export default function Home() {
       />
 
       <div className='flex flex-col gap-2'>
-        <h1 className={`${barlow.className} text-2xl font-semibold`}>
-          about me
-        </h1>
-        <p className='text-left text-base max-w-lg'>
+        <h2 className={`${barlow.className}`}>about me</h2>
+        <p className='max-w-2xl text-left'>
           I am a self-motivated computer engineering student in my fourth year
           at the University of British Columbia. I am passionate about using
           innovative technology to improve sustainability and daily health.
@@ -57,14 +55,12 @@ export default function Home() {
       </div>
 
       <div className='flex flex-col gap-2'>
-        <h1 className={`${barlow.className} text-2xl font-semibold`}>
-          contact me!
-        </h1>
+        <h2 className={`${barlow.className}`}>contact me!</h2>
         <ContactIcons />
       </div>
 
-      <div>
-        <h1 className={`${barlow.className} text-2xl font-semibold`}>skills</h1>
+      <div className='flex flex-col gap-2'>
+        <h2 className={`${barlow.className}`}>skills</h2>
         <div>
           <SkillIcons />
         </div>

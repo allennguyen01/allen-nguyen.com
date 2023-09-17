@@ -10,25 +10,26 @@ import {
 
 export default function ContactIcons() {
   const iconSize = 50;
+
   const contacts = [
     {
       name: 'linkedIn',
-      icon: <RiLinkedinFill size={iconSize} />,
+      icon: <RiLinkedinFill className='w-12 h-12 lg:w-16 lg:h-16' />,
       link: 'https://www.linkedin.com/in/allendnguyen/',
     },
     {
       name: 'github',
-      icon: <RiGithubFill size={iconSize} />,
+      icon: <RiGithubFill className='w-12 h-12 lg:w-16 lg:h-16' />,
       link: 'https://github.com/allennguyen01/',
     },
     {
       name: 'resume',
-      icon: <RiFilePaper2Fill size={iconSize} />,
+      icon: <RiFilePaper2Fill className='w-12 h-12 lg:w-16 lg:h-16' />,
       link: './resume.pdf',
     },
     {
       name: 'email',
-      icon: <RiMailFill size={iconSize} />,
+      icon: <RiMailFill className='w-12 h-12 lg:w-16 lg:h-16' />,
       link: 'mailto:allennguyen415@gmail.com',
     },
   ];

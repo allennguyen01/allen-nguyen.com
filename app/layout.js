@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={`${inter.className}`}>
-        <nav className='flex justify-between items-center gap-4 m-4 text-lg font-medium'>
+        <nav className='flex justify-between items-center gap-4 my-4 mx-4 lg:mx-56 text-lg font-medium'>
           <Link href='/' className='flex items-center gap-2'>
             <Image src={miiHeadshot} alt='Allen as a Mii' className='w-14' />
           </Link>

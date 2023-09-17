@@ -131,7 +131,9 @@ export default function Projects() {
 
   return (
     <main className='flex min-h-screen flex-col items-center justify-center m-8 gap-8'>
-      <h1 className={`${barlow.className} text-4xl font-bold`}>projects 📚</h1>
+      <h1 className={`${barlow.className} text-4xl lg:text-6xl font-bold`}>
+        projects 📚
+      </h1>
       <Project
         title={"University of Calgary Chinese Students' Society"}
         projectType={'Business website'}
