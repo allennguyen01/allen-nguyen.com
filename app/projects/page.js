@@ -1,15 +1,19 @@
 import Image from 'next/image';
 
 import UCalgaryCSSDesktop from '../../public/images/projects/ucalgary-css/css-desktop-homepage.jpg';
+import UCalgaryCSSlogo from '../../public/images/projects/ucalgary-css/ucalgarycss-logo.png';
 
 import cgClosetScreen from '../../public/images/projects/closetgenie/closet-screen.png';
 import cgOutfitsScreen from '../../public/images/projects/closetgenie/outfits-screen.png';
 import cgLaundryScreen from '../../public/images/projects/closetgenie/laundry-screen.png';
 import cgProfileScreen from '../../public/images/projects/closetgenie/profile-screen.png';
+import cgLogo from '../../public/images/projects/closetgenie/closetgenie-logo.png';
 
 import seekicksWebpage from '../../public/images/projects/seekicks/webpage.jpg';
+import seekicksLogo from '../../public/images/projects/seekicks/seekicks-logo.png';
 
 import slientOwlApp from '../../public/images/projects/silent-owl/silent-owl.png';
+import slientOwlLogo from '../../public/images/projects/silent-owl/silent-owl-logo.png';
 
 const techBadges = {
   'React.js':
@@ -131,6 +135,7 @@ export default function Projects() {
       <h1>projects 📚</h1>
       <Project
         title={"University of Calgary Chinese Students' Society"}
+        logo={UCalgaryCSSlogo}
         projectType={'Business website'}
         previewImages={
           <SinglePreviewImg
@@ -152,6 +157,7 @@ export default function Projects() {
 
       <Project
         title={'ClosetGenie'}
+        logo={cgLogo}
         projectType={'Mobile application'}
         previewImages={<ClosetGeniePreviewImg />}
         githubLink={'https://github.com/allennguyen01/ClosetGenie'}
@@ -180,6 +186,7 @@ export default function Projects() {
 
       <Project
         title={'SeeKicks'}
+        logo={seekicksLogo}
         projectType={'Machine learning application'}
         previewImages={
           <SinglePreviewImg src={seekicksWebpage} alt='SeeKick webpage' />
@@ -196,6 +203,7 @@ export default function Projects() {
 
       <Project
         title={'Silent Owl'}
+        logo={slientOwlLogo}
         projectType={'BC Hacks 2.0 Hackathon Project'}
         previewImages={
           <SinglePreviewImg
@@ -217,6 +225,7 @@ export default function Projects() {
 }
 
 function Project({
+  logo,
   title,
   projectType,
   previewImages,
@@ -228,9 +237,13 @@ function Project({
 }) {
   return (
     <article className='flex flex-col gap-4 max-w-3xl'>
-      <section>
-        <h2 className='text-2xl font-medium'>{title}</h2>
-        <p className='text-xl text-gray-400'>{projectType}</p>
+      <section className='flex items-center gap-2 lg:gap-4'>
+        <Image src={logo} alt={`${title} logo`} className='w-20' />
+
+        <div>
+          <h3>{title}</h3>
+          <p className='text-lg lg:text-xl text-gray-400'>{projectType}</p>
+        </div>
       </section>
 
       <section className='flex flex-wrap gap-2'>{previewImages}</section>
