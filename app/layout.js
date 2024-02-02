@@ -18,7 +18,13 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <nav className='flex justify-between items-center gap-4 my-4 mx-4 lg:mx-56 text-lg font-medium'>
           <Link href='/' className='flex items-center gap-2'>
-            <Image src={miiHeadshot} alt='Allen as a Mii' className='w-14' />
+            <button className='btn btn-circle btn-neutral w-16 h-16'>
+              <Image
+                src={miiHeadshot}
+                alt='Allen as a Mii'
+                className='w-14 rounded-full'
+              />
+            </button>
           </Link>
           <section className='flex gap-4'>
             <Link href='/projects'>projects</Link>
