@@ -5,13 +5,13 @@
 @tailwind utilities;
 
 h1 {
-  @apply font-barlow text-4xl lg:text-6xl font-bold;
+	@apply font-barlow text-4xl lg:text-6xl font-bold;
 }
 
 h2 {
-  @apply font-barlow text-2xl lg:text-4xl font-semibold;
+	@apply font-barlow text-2xl lg:text-4xl font-semibold;
 }
 
 h3 {
-  @apply text-xl lg:text-2xl font-semibold;
+	@apply text-lg lg:text-2xl font-semibold;
 }
