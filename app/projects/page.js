@@ -1,6 +1,10 @@
 import Image from 'next/image';
 
+import peakfitApp from '../../public/images/projects/peakfit/app.png';
+import peakfitLogo from '../../public/images/projects/peakfit/logo.png';
+
 import UCalgaryCSSDesktop from '../../public/images/projects/ucalgary-css/css-desktop-homepage.jpg';
+import UCalgaryCSSMobile from '../../public/images/projects/ucalgary-css/css-phone-homepage.jpg';
 import UCalgaryCSSlogo from '../../public/images/projects/ucalgary-css/ucalgarycss-logo.png';
 
 import cgClosetScreen from '../../public/images/projects/closetgenie/closet-screen.png';
@@ -46,9 +50,22 @@ const techBadges = {
 	'Express.js':
 		'https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB',
 	Java: 'https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white',
+	TypeScript:
+		'https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white',
+	ChatGPT:
+		'https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white',
 };
 
 export default function Projects() {
+	const peakFitTechStack = [
+		'React Native',
+		'Expo',
+		'TypeScript',
+		'Node.js',
+		'Express.js',
+		'ChatGPT',
+	];
+
 	const ucalgaryCSSTechStack = [
 		'React.js',
 		'JavaScript',
@@ -129,6 +146,27 @@ export default function Projects() {
 	return (
 		<main className='flex min-h-screen flex-col items-center justify-center m-8 gap-8'>
 			<h1>projects 📚</h1>
+
+			<Project
+				title={'PeakFit'}
+				logo={peakfitLogo}
+				projectType={'New Venture Design mobile application'}
+				previewImages={
+					<SinglePreviewImg
+						src={peakfitApp}
+						alt='App UI of PeakFit mobile application'
+					/>
+				}
+				githubLink={'https://github.com/allennguyen01/peakfit'}
+				summaryPoints={[
+					'Develop a mobile application that provides personalized workout plans and nutrition advice to users based on their fitness goals and preferences',
+					'Design a UI using Figma prototypes and mockups based on customer interviews and validation testing',
+					'Construct a mobile interface using Expo, React Native, and TypeScript for seamless navigation and custom component modularity',
+					'Integrate a RESTful API backend with Node.js and Express.js to store user data and AI generated plans from ChatGPT API',
+				]}
+				techStack={peakFitTechStack}
+				datesWorked={'Jan - Apr 2024'}
+			/>
 
 			<Project
 				title={"University of Calgary Chinese Students' Society"}
@@ -244,7 +282,7 @@ function Project({
 						<Image
 							src={logo}
 							alt={`${title} logo`}
-							className='w-20'
+							className='w-20 rounded-lg'
 						/>
 
 						<div>
