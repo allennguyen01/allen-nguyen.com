@@ -10,21 +10,27 @@ import { FaChalkboardTeacher } from 'react-icons/fa';
 
 const workExperience = [
 	{
+		position: 'Frontend Developer',
+		company: 'Inverted AI • Co-op',
+		time: 'September 2024 - Present',
+		description: '🚗 autonomous vehicles UI and web',
+	},
+	{
 		position: 'Software Engineer',
 		company: 'Voronoi Health Analytics • Co-op',
-		time: 'Sept 2023 - Present',
+		time: 'September 2023 - December 2023',
 		description: '🩻 medical imaging processing and AI software',
 	},
 	{
 		position: 'Software Engineer',
 		company: 'BCI • Co-op',
-		time: 'Sept 2022 - Dec 2022',
+		time: 'September 2022 - December 2022',
 		description: '📈 internal data collection full stack web application',
 	},
 	{
 		position: 'Engineering Projects Instructor',
 		company: 'Zen Maker Lab • Co-op',
-		time: 'Jan 2022 - Aug 2022',
+		time: 'January 2022 - August 2022',
 		description: '🧑🏻‍🏫 STEM education in coding, science, and engineering',
 		icon: <FaChalkboardTeacher />,
 	},
@@ -32,16 +38,22 @@ const workExperience = [
 
 const extracurriculars = [
 	{
-		position: 'Software Developer',
-		company: 'UBC Launchpad • Seasonal',
-		time: 'Sept 2023 - Present',
-		description: '👨🏻‍⚕️ seizure tracking mobile application',
+		position: 'Sponsorship Coordinator',
+		company: 'UBC Launchpad',
+		time: 'May 2024 - Present',
+		description: '💵 sponsorship and partnership creation',
 	},
 	{
-		position: 'Socials Coordinator',
-		company: 'UBC Vietnamese Students Association',
-		time: 'Sept 2023 - Present',
-		description: '🎊 internal team bonding events and engagement',
+		position: 'Senior Orientation Leader',
+		company: 'UBC Applied Science',
+		time: 'May 2024 - August 2024',
+		description: '🫂 organizational team management for orientation day',
+	},
+	{
+		position: 'Software Developer',
+		company: 'UBC Launchpad',
+		time: 'September 2023 - April 2024',
+		description: '👨🏻‍⚕️ seizure tracking mobile application',
 	},
 	{
 		position: 'VP Development',
@@ -50,8 +62,14 @@ const extracurriculars = [
 		description: "💻 web development for club's landing website",
 	},
 	{
+		position: 'Socials Coordinator',
+		company: 'UBC Vietnamese Students Association',
+		time: 'September 2023 - April 2024',
+		description: '🎊 internal team bonding events and engagement',
+	},
+	{
 		position: 'Renewable Energy Team Lead',
-		company: 'UBC WasteNauts • Seasonal',
+		company: 'UBC WasteNauts',
 		time: 'May 2021 - April 2022',
 		description: '🔋 sustainable renewable energy harvesting system',
 		icon: <PiPottedPlantBold />,
