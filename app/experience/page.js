@@ -2,6 +2,62 @@ import { BsPersonWorkspace } from 'react-icons/bs';
 import { PiPottedPlantBold } from 'react-icons/pi';
 import { FaChalkboardTeacher } from 'react-icons/fa';
 
+// import VoronoiLogo from '../../public/images/experience/voronoi-logo.png';
+// import UBCLaunchpadLogo from '../../public/images/experience/ubclaunchpad-logo.png';
+// import BCILogo from '../../public/images/experience/bci-logo.svg';
+// import ZenMakerLabLogo from '../../public/images/experience/zenmakerlab-logo.png';
+// import UBCWasteNautsLogo from '../../public/images/experience/ubcwastenauts-logo.jpg';
+
+const workExperience = [
+	{
+		position: 'Software Engineer',
+		company: 'Voronoi Health Analytics • Co-op',
+		time: 'Sept 2023 - Present',
+		description: '🩻 medical imaging processing and AI software',
+	},
+	{
+		position: 'Software Engineer',
+		company: 'BCI • Co-op',
+		time: 'Sept 2022 - Dec 2022',
+		description: '📈 internal data collection full stack web application',
+	},
+	{
+		position: 'Engineering Projects Instructor',
+		company: 'Zen Maker Lab • Co-op',
+		time: 'Jan 2022 - Aug 2022',
+		description: '🧑🏻‍🏫 STEM education in coding, science, and engineering',
+		icon: <FaChalkboardTeacher />,
+	},
+];
+
+const extracurriculars = [
+	{
+		position: 'Software Developer',
+		company: 'UBC Launchpad • Seasonal',
+		time: 'Sept 2023 - Present',
+		description: '👨🏻‍⚕️ seizure tracking mobile application',
+	},
+	{
+		position: 'Socials Coordinator',
+		company: 'UBC Vietnamese Students Association',
+		time: 'Sept 2023 - Present',
+		description: '🎊 internal team bonding events and engagement',
+	},
+	{
+		position: 'VP Development',
+		company: "UCalgary Chinese Students' Society",
+		time: 'July 2023 - Present',
+		description: "💻 web development for club's landing website",
+	},
+	{
+		position: 'Renewable Energy Team Lead',
+		company: 'UBC WasteNauts • Seasonal',
+		time: 'May 2021 - April 2022',
+		description: '🔋 sustainable renewable energy harvesting system',
+		icon: <PiPottedPlantBold />,
+	},
+];
+
 export default function Experience() {
 	return (
 		<main className='flex flex-col flex-auto items-center m-8 mb-2 gap-12'>
@@ -14,25 +70,12 @@ export default function Experience() {
 						id='work-experience'
 						className='relative border-l border-gray-200 dark:border-gray-700 lg:max-w-sm'
 					>
-						<TimelineItem
-							position='Software Engineer'
-							company='Voronoi Health Analytics • Co-op'
-							time='Sept 2023 - Present'
-							description='🩻 medical imaging processing and AI software'
-						/>
-						<TimelineItem
-							position='Software Engineer'
-							company='BCI • Co-op'
-							time='Sept 2022 - Dec 2022'
-							description='📈 internal data collection full stack web application'
-						/>
-						<TimelineItem
-							position='Engineering Projects Instructor'
-							company='Zen Maker Lab • Co-op'
-							time='Jan 2022 - Aug 2022'
-							description='🧑🏻‍🏫 STEM education in coding, science, and engineering'
-							icon={<FaChalkboardTeacher />}
-						/>
+						{workExperience.map((item, index) => (
+							<TimelineItem
+								key={index}
+								{...item}
+							/>
+						))}
 					</ol>
 				</div>
 
@@ -42,33 +85,12 @@ export default function Experience() {
 						id='extracurriculars'
 						className='relative border-l border-gray-200 dark:border-gray-700 lg:max-w-sm'
 					>
-						<TimelineItem
-							position='Software Developer'
-							company='UBC Launchpad • Seasonal'
-							time='Sept 2023 - Present'
-							description='👨🏻‍⚕️ seizure tracking mobile application'
-						/>
-						<TimelineItem
-							position='Socials Coordinator'
-							company='UBC Vietnamese Students Association'
-							time='Sept 2023 - Present'
-							description='🎊 internal team bonding events and engagement'
-							icon={<PiPottedPlantBold />}
-						/>
-						<TimelineItem
-							position='VP Development'
-							company="UCalgary Chinese Students' Society"
-							time='July 2023 - Present'
-							description="💻 web development for club's landing website"
-							icon={<PiPottedPlantBold />}
-						/>
-						<TimelineItem
-							position='Renewable Energy Team Lead'
-							company='UBC WasteNauts • Seasonal'
-							time='May 2021 - April 2022'
-							description='🔋 sustainable renewable energy harvesting system'
-							icon={<PiPottedPlantBold />}
-						/>
+						{extracurriculars.map((item, index) => (
+							<TimelineItem
+								key={index}
+								{...item}
+							/>
+						))}
 					</ol>
 				</div>
 			</div>
