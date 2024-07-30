@@ -143,6 +143,36 @@ export default function Projects() {
 		);
 	}
 
+	function UCalgaryCSSPreviewImg() {
+		const previewImages = [
+			{
+				src: UCalgaryCSSDesktop,
+				alt: 'UCalgary CSS website desktop view',
+				width: 'w-3/4',
+			},
+			{
+				src: UCalgaryCSSMobile,
+				alt: 'UCalgary CSS website mobile view',
+				width: 'w-1/4',
+			},
+		];
+
+		return (
+			<section className='flex gap-2 justify-center items-center'>
+				{previewImages.map((img) => {
+					return (
+						<Image
+							key={img.alt}
+							src={img.src}
+							alt={img.alt}
+							className={`rounded-sm ${img.width}`}
+						/>
+					);
+				})}
+			</section>
+		);
+	}
+
 	return (
 		<main className='flex min-h-screen flex-col items-center justify-center m-8 gap-8'>
 			<h1>projects 📚</h1>
@@ -172,12 +202,7 @@ export default function Projects() {
 				title={"University of Calgary Chinese Students' Society"}
 				logo={UCalgaryCSSlogo}
 				projectType={'Business website'}
-				previewImages={
-					<SinglePreviewImg
-						src={UCalgaryCSSDesktop}
-						alt='Desktop view of UCalgary Chinese Students Society Website'
-					/>
-				}
+				previewImages={<UCalgaryCSSPreviewImg />}
 				previewLink={'https://ucalgarycss.com/'}
 				githubLink={'https://github.com/allennguyen01/ucalgary-css'}
 				summaryPoints={[
