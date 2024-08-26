@@ -25,7 +25,7 @@ export default function ContactIcons() {
 		{
 			name: 'resume',
 			icon: <RiFilePaper2Fill className='w-12 h-12 lg:w-16 lg:h-16' />,
-			link: './Allen Nguyen Resume.pdf',
+			link: './Allen Nguyen Resume (Aug 26 2024).pdf',
 		},
 		{
 			name: 'email',
@@ -37,7 +37,10 @@ export default function ContactIcons() {
 	return (
 		<div className='flex gap-4'>
 			{contacts.map((contact) => (
-				<div key={contact.name} className='flex flex-col items-center'>
+				<div
+					key={contact.name}
+					className='flex flex-col items-center'
+				>
 					<motion.a
 						href={contact.link}
 						whileHover={{ rotate: 180 }}

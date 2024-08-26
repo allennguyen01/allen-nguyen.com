@@ -32,7 +32,10 @@ function NavBar() {
 	return (
 		<div className='navbar bg-base-100 flex justify-center items-center self-center lg:pt-8 lg:max-w-screen-xl font-medium'>
 			<div className='navbar-start'>
-				<Link href='/' className='flex items-center gap-2'>
+				<Link
+					href='/'
+					className='flex items-center gap-2'
+				>
 					<button className='btn btn-circle btn-neutral w-16 h-16'>
 						<Image
 							src={miiHeadshot}
@@ -81,7 +84,7 @@ function NavBar() {
 							experience
 						</Link>
 						<Link
-							href='./Allen Nguyen Resume.pdf'
+							href='./Allen Nguyen Resume (Aug 26 2024).pdf'
 							className='bg-accent px-4 py-2 rounded-lg text-black hover:bg-accent-focus'
 							target='_blank'
 							rel='noopener noreferrer'
@@ -106,7 +109,7 @@ function NavBar() {
 						experience
 					</Link>
 					<Link
-						href='./Allen Nguyen Resume.pdf'
+						href='./Allen Nguyen Resume (Aug 26 2024).pdf'
 						className='bg-accent px-4 py-2 rounded-lg text-black hover:bg-accent-focus'
 						target='_blank'
 						rel='noopener noreferrer'
