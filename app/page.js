@@ -13,9 +13,9 @@ export default function Home() {
       </p>
 
       <Image
-        src='/images/me-formal.jpg'
+        src='/images/me-casual.jpg'
         alt='Photo of Allen'
-        width={250}
+        width={500}
         height={250}
         className='rounded-lg'
         unoptimized
@@ -31,21 +31,6 @@ export default function Home() {
           Reach out to me if you want to talk about the newest tech,
           engineering, basketball, music (rap and R&B), and movies.
         </p>
-        {/* <ol className='list-decimal text-left max-w-lg'>
-          <li>
-            Computer Engineering Student in my fourth year at the University of
-            British Columbia
-          </li>
-          <li>
-            Passionate about using innovative technology to improve
-            sustainability and wellness outcomes
-          </li>
-          <li>Enjoy meeting new people and hearing new perspectives</li>
-          <li>
-            Reach out to me if you want to talk about the newest tech,
-            engineering, basketball, music (rap and R&B)
-          </li>
-        </ol> */}
       </div>
 
       <div className='flex flex-col gap-2'>
