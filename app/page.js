@@ -7,7 +7,10 @@ export default function Home() {
     <main className='flex min-h-screen flex-col justify-center items-center m-8 gap-8 text-center text-base lg:text-lg'>
       <h1>hey, I&apos;m Allen 👋</h1>
       <p className='lg:text-xl'>
-        computer engineering @ ubc
+        👨🏻‍💻 currently: software developer @ Inverted AI
+        <br />
+        <br />
+        🎒 computer engineering @ ubc
         <br />
         📍 vancouver, canada
       </p>
@@ -24,12 +27,18 @@ export default function Home() {
       <div className='flex flex-col gap-2'>
         <h2>about me</h2>
         <p className='max-w-2xl text-left'>
-          I am a self-motivated computer engineering student in my fourth year
-          at the University of British Columbia. I am passionate about using
-          innovative technology to improve sustainability and daily health.
-          <br /> <br />I enjoy meeting new people and hearing new perspectives.
-          Reach out to me if you want to talk about the newest tech,
-          engineering, basketball, music (rap and R&B), and movies.
+          I am an inspiring <i>software engineer</i> focused on building unique
+          products that solve meaningful problems. Right now, I am in my 5th
+          year of Computer Engineering at the University of British Columbia.
+          <br /> <br />
+          When I&apos;m not working, you can find me...
+          <ul className='emoji-list list-inside'>
+            <li>Running through the streets of Vancouver</li>
+            <li>
+              Working on passion projects to improve health and connections
+            </li>
+            <li>Discovering new R&B and rap music</li>
+          </ul>
         </p>
       </div>
 
