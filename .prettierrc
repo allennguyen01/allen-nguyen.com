@@ -1,6 +1,6 @@
 {
-  "useTabs": true,
-  "jsxSingleQuote": true,
-  "singleQuote": true,
-  "singleAttributePerLine": true
+	"useTabs": false,
+	"jsxSingleQuote": true,
+	"singleQuote": true,
+	"singleAttributePerLine": true
 }
