@@ -80,7 +80,7 @@ export default function Experience() {
   return (
     <main
       id='experience'
-      className='flex flex-col flex-auto items-center m-8 mb-2 gap-12'
+      className='flex flex-col flex-auto items-center mx-8 mt-20 lg:mt-32 mb-2 gap-12'
     >
       <h1>experience 💻</h1>
 
