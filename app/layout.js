@@ -72,13 +72,13 @@ function NavBar() {
 						className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
 					>
 						<Link
-							href='/projects'
+							href='#projects'
 							className='hover:bg-black px-4 py-2 rounded-lg'
 						>
 							projects
 						</Link>
 						<Link
-							href='/experience'
+							href='#experience'
 							className='hover:bg-black px-4 py-2 rounded-lg'
 						>
 							experience
@@ -97,13 +97,13 @@ function NavBar() {
 			<div className='navbar-end hidden lg:flex'>
 				<ul className='menu menu-horizontal px-1 gap-4 text-base'>
 					<Link
-						href='/projects'
+						href='#projects'
 						className='hover:bg-black px-4 py-2 rounded-lg'
 					>
 						projects
 					</Link>
 					<Link
-						href='/experience'
+						href='#experience'
 						className='hover:bg-black px-4 py-2 rounded-lg'
 					>
 						experience

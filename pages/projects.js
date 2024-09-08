@@ -1,28 +1,28 @@
 import Image from 'next/image';
 
-import PeakFitLogo from '../../public/images/projects/peakfit/logo.png';
-import PeakFitHome from '../../public/images/projects/peakfit/home.png';
-import PeakFitAIBuilder from '../../public/images/projects/peakfit/ai-builder.png';
-import PeakFitNutrition from '../../public/images/projects/peakfit/nutrition.png';
-import PeakFitExercise from '../../public/images/projects/peakfit/exercise.png';
-import PeakFitYou from '../../public/images/projects/peakfit/you.png';
-import PeakFitColorPalette from '../../public/images/projects/peakfit/color-palette.png';
+import PeakFitLogo from '../public/images/projects/peakfit/logo.png';
+import PeakFitHome from '../public/images/projects/peakfit/home.png';
+import PeakFitAIBuilder from '../public/images/projects/peakfit/ai-builder.png';
+import PeakFitNutrition from '../public/images/projects/peakfit/nutrition.png';
+import PeakFitExercise from '../public/images/projects/peakfit/exercise.png';
+import PeakFitYou from '../public/images/projects/peakfit/you.png';
+import PeakFitColorPalette from '../public/images/projects/peakfit/color-palette.png';
 
-import UCalgaryCSSDesktop from '../../public/images/projects/ucalgary-css/css-desktop-homepage.jpg';
-import UCalgaryCSSMobile from '../../public/images/projects/ucalgary-css/css-phone-homepage.jpg';
-import UCalgaryCSSlogo from '../../public/images/projects/ucalgary-css/ucalgarycss-logo.png';
+import UCalgaryCSSDesktop from '../public/images/projects/ucalgary-css/css-desktop-homepage.jpg';
+import UCalgaryCSSMobile from '../public/images/projects/ucalgary-css/css-phone-homepage.jpg';
+import UCalgaryCSSlogo from '../public/images/projects/ucalgary-css/ucalgarycss-logo.png';
 
-import cgClosetScreen from '../../public/images/projects/closetgenie/closet-screen.png';
-import cgOutfitsScreen from '../../public/images/projects/closetgenie/outfits-screen.png';
-import cgLaundryScreen from '../../public/images/projects/closetgenie/laundry-screen.png';
-import cgProfileScreen from '../../public/images/projects/closetgenie/profile-screen.png';
-import cgLogo from '../../public/images/projects/closetgenie/closetgenie-logo.png';
+import cgClosetScreen from '../public/images/projects/closetgenie/closet-screen.png';
+import cgOutfitsScreen from '../public/images/projects/closetgenie/outfits-screen.png';
+import cgLaundryScreen from '../public/images/projects/closetgenie/laundry-screen.png';
+import cgProfileScreen from '../public/images/projects/closetgenie/profile-screen.png';
+import cgLogo from '../public/images/projects/closetgenie/closetgenie-logo.png';
 
-import seekicksWebpage from '../../public/images/projects/seekicks/webpage.jpg';
-import seekicksLogo from '../../public/images/projects/seekicks/seekicks-logo.png';
+import seekicksWebpage from '../public/images/projects/seekicks/webpage.jpg';
+import seekicksLogo from '../public/images/projects/seekicks/seekicks-logo.png';
 
-import slientOwlApp from '../../public/images/projects/silent-owl/silent-owl.png';
-import slientOwlLogo from '../../public/images/projects/silent-owl/silent-owl-logo.png';
+import slientOwlApp from '../public/images/projects/silent-owl/silent-owl.png';
+import slientOwlLogo from '../public/images/projects/silent-owl/silent-owl-logo.png';
 
 const techBadges = {
   'React.js':
@@ -233,7 +233,10 @@ export default function Projects() {
   }
 
   return (
-    <main className='flex min-h-screen flex-col items-center justify-center m-8 gap-8'>
+    <main
+      id='projects'
+      className='flex min-h-screen flex-col items-center justify-center m-8 gap-8'
+    >
       <h1>projects 📚</h1>
 
       <Project
