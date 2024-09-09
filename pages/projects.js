@@ -233,10 +233,7 @@ export default function Projects() {
   }
 
   return (
-    <main
-      id='projects'
-      className='mx-8 mt-20 flex min-h-screen flex-col items-center justify-center gap-8 lg:mt-32'
-    >
+    <main className='mx-8 mt-20 flex min-h-screen flex-col items-center justify-center gap-8 lg:mt-32'>
       <h1>projects 📚</h1>
 
       <Project

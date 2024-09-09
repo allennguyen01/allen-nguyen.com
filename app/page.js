@@ -6,9 +6,15 @@ export default function Home() {
   return (
     <div>
       <AboutMe />
-      <div className='divider'></div>
+      <div
+        className='divider'
+        id='experience'
+      ></div>
       <Experience />
-      <div className='divider'></div>
+      <div
+        className='divider'
+        id='projects'
+      ></div>
       <Projects />
     </div>
   );

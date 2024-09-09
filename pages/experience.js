@@ -78,10 +78,7 @@ const extracurriculars = [
 
 export default function Experience() {
   return (
-    <main
-      id='experience'
-      className='mx-8 mb-2 mt-20 flex flex-auto flex-col items-center gap-12 lg:mt-32'
-    >
+    <main className='mx-8 mb-2 mt-24 flex flex-auto flex-col items-center gap-12 lg:mt-32'>
       <h1>experience 💻</h1>
 
       <div className='flex flex-col lg:flex-row'>

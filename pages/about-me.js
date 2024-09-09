@@ -6,7 +6,7 @@ export default function AboutMe() {
   return (
     <main
       id='about-me'
-      className='flex min-h-screen flex-col justify-center items-center m-8 gap-8 text-center text-base lg:text-lg'
+      className='m-8 mt-24 flex min-h-screen flex-col items-center justify-center gap-8 text-center text-base lg:mt-32 lg:text-lg'
     >
       <h1>hey, I&apos;m Allen 👋</h1>
       <p className='lg:text-xl'>
