@@ -56,9 +56,18 @@ export default function SkillIcons() {
 
   return (
     <section className='flex flex-col gap-4'>
-      <SkillType type='languages' skills={languages} />
-      <SkillType type='frameworks-libraries' skills={frameworks} />
-      <SkillType type='tools' skills={tools} />
+      <SkillType
+        type='languages'
+        skills={languages}
+      />
+      <SkillType
+        type='frameworks-libraries'
+        skills={frameworks}
+      />
+      <SkillType
+        type='tools'
+        skills={tools}
+      />
     </section>
   );
 }
@@ -71,7 +80,10 @@ function SkillType({ type, skills }) {
   };
 
   return (
-    <div key={type} className='flex flex-col items-center gap-2'>
+    <div
+      key={type}
+      className='flex flex-col items-center gap-2'
+    >
       <p className='text-base'>{type}</p>
       <div className={`grid ${gridVariants[type]} gap-4 text-center`}>
         {skills.map((s) => (
@@ -83,7 +95,7 @@ function SkillType({ type, skills }) {
             <Image
               src={s.image}
               alt={`${s.name} logo`}
-              className='bg-white p-1 object-contain rounded-xl w-14 h-14 lg:w-16 lg:h-16'
+              className='h-14 w-14 rounded-xl bg-white object-contain p-1 lg:h-16 lg:w-16'
             />
             <p className='text-xs lg:text-sm'>{s.name}</p>
           </motion.div>
