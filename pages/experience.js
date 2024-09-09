@@ -80,7 +80,7 @@ export default function Experience() {
   return (
     <main
       id='experience'
-      className='flex flex-col flex-auto items-center mx-8 mt-20 lg:mt-32 mb-2 gap-12'
+      className='mx-8 mb-2 mt-20 flex flex-auto flex-col items-center gap-12 lg:mt-32'
     >
       <h1>experience 💻</h1>
 
@@ -128,14 +128,14 @@ function TimelineItem({
 }) {
   return (
     <li className='mb-8 ml-6'>
-      <span className='absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900'>
+      <span className='absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900'>
         {icon}
       </span>
-      <h3 className='flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
+      <h3 className='mb-1 flex items-center text-lg font-semibold text-gray-900 dark:text-white'>
         {position}
       </h3>
       <h4 className='mb-2'>{company}</h4>
-      <time className='block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+      <time className='mb-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
         {time}
       </time>
       <p className='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>

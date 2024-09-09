@@ -15,11 +15,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
+      <body className={`${inter.className} flex min-h-screen flex-col`}>
         <NavBar />
         {children}
 
-        <footer className='flex flex-col text-sm m-4 text-center gap-4'>
+        <footer className='m-4 flex flex-col gap-4 text-center text-sm'>
           <hr />
           <p>Ⓒ 2023 Allen Nguyen, Vancouver Canada</p>
         </footer>
@@ -30,13 +30,13 @@ export default function RootLayout({ children }) {
 
 function NavBar() {
   return (
-    <div className='navbar bg-base-100 flex justify-center items-center self-center lg:pt-8 lg:max-w-screen-xl font-medium'>
+    <div className='navbar fixed top-0 z-50 flex items-center justify-center self-center bg-base-100 font-medium lg:max-w-screen-xl lg:py-4'>
       <div className='navbar-start'>
         <Link
           href='/'
           className='flex items-center gap-2'
         >
-          <button className='btn btn-circle btn-neutral w-16 h-16'>
+          <button className='btn btn-circle btn-neutral h-16 w-16'>
             <Image
               src={miiHeadshot}
               alt='Allen as a Mii'
@@ -69,23 +69,23 @@ function NavBar() {
           </div>
           <ul
             tabIndex={0}
-            className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
+            className='menu dropdown-content rounded-box menu-sm z-[1] mt-3 w-52 bg-base-100 p-2 shadow'
           >
             <Link
               href='#experience'
-              className='hover:bg-black px-4 py-2 rounded-lg'
+              className='rounded-lg px-4 py-2 hover:bg-black'
             >
               experience
             </Link>
             <Link
               href='#projects'
-              className='hover:bg-black px-4 py-2 rounded-lg'
+              className='rounded-lg px-4 py-2 hover:bg-black'
             >
               projects
             </Link>
             <Link
               href='./Allen Nguyen Resume (Aug 26 2024).pdf'
-              className='bg-accent px-4 py-2 rounded-lg text-black hover:bg-accent-focus'
+              className='rounded-lg bg-accent px-4 py-2 text-black hover:bg-accent-focus'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -95,22 +95,22 @@ function NavBar() {
         </div>
       </div>
       <div className='navbar-end hidden lg:flex'>
-        <ul className='menu menu-horizontal px-1 gap-4 text-base'>
+        <ul className='menu menu-horizontal gap-4 px-1 text-base'>
           <Link
             href='#experience'
-            className='hover:bg-black px-4 py-2 rounded-lg'
+            className='rounded-lg px-4 py-2 hover:bg-black'
           >
             experience
           </Link>
           <Link
             href='#projects'
-            className='hover:bg-black px-4 py-2 rounded-lg'
+            className='rounded-lg px-4 py-2 hover:bg-black'
           >
             projects
           </Link>
           <Link
             href='./Allen Nguyen Resume (Aug 26 2024).pdf'
-            className='bg-accent px-4 py-2 rounded-lg text-black hover:bg-accent-focus'
+            className='rounded-lg bg-accent px-4 py-2 text-black hover:bg-accent-focus'
             target='_blank'
             rel='noopener noreferrer'
           >

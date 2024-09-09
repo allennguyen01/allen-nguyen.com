@@ -151,7 +151,7 @@ export default function Projects() {
     ];
 
     return (
-      <section className='grid grid-cols-3 gap-1 lg:gap-4 items-center justify-center lg:w-3/4'>
+      <section className='grid grid-cols-3 items-center justify-center gap-1 lg:w-3/4 lg:gap-4'>
         {previewImages.map((img) => {
           return (
             <Image
@@ -187,14 +187,14 @@ export default function Projects() {
     ];
 
     return (
-      <section className='flex gap-2 justify-center'>
+      <section className='flex justify-center gap-2'>
         {previewImages.map((img) => {
           return (
             <Image
               key={img.alt}
               src={img.src}
               alt={img.alt}
-              className='rounded-sm w-1/4'
+              className='w-1/4 rounded-sm'
             />
           );
         })}
@@ -217,7 +217,7 @@ export default function Projects() {
     ];
 
     return (
-      <section className='flex gap-2 justify-center items-center'>
+      <section className='flex items-center justify-center gap-2'>
         {previewImages.map((img) => {
           return (
             <Image
@@ -235,7 +235,7 @@ export default function Projects() {
   return (
     <main
       id='projects'
-      className='flex min-h-screen flex-col items-center justify-center mx-8 mt-20 lg:mt-32 gap-8'
+      className='mx-8 mt-20 flex min-h-screen flex-col items-center justify-center gap-8 lg:mt-32'
     >
       <h1>projects 📚</h1>
 
@@ -357,7 +357,7 @@ function Project({
 }) {
   return (
     <>
-      <div className='collapse collapse-arrow justify-center items-center max-w-4xl'>
+      <div className='collapse collapse-arrow max-w-4xl items-center justify-center'>
         <input type='checkbox' />
         <div className='collapse-title flex flex-col gap-4'>
           <section className='flex items-center gap-2 lg:gap-4'>
@@ -369,7 +369,7 @@ function Project({
 
             <div>
               <h3>{title}</h3>
-              <p className='text-base lg:text-xl text-gray-400'>
+              <p className='text-base text-gray-400 lg:text-xl'>
                 {projectType}
               </p>
             </div>
@@ -380,8 +380,8 @@ function Project({
           </section>
         </div>
 
-        <div className='collapse-content bg-base-200 flex flex-col gap-4 lg:mx-10 pt-4 lg:px-6 rounded-lg'>
-          <section className='flex flex-row text-lg justify-evenly font-semibold'>
+        <div className='collapse-content flex flex-col gap-4 rounded-lg bg-base-200 pt-4 lg:mx-10 lg:px-6'>
+          <section className='flex flex-row justify-evenly text-lg font-semibold'>
             <ProjectButtons
               previewLink={previewLink}
               githubLink={githubLink}
@@ -390,7 +390,7 @@ function Project({
 
           <section>
             <p className='lg:text-xl'>Summary</p>
-            <ul className='list-disc list-inside text-sm lg:text-base text-gray-400 leading-relaxed'>
+            <ul className='list-inside list-disc text-sm leading-relaxed text-gray-400 lg:text-base'>
               {summaryPoints.map((pt) => {
                 return <li key={pt}>{pt}</li>;
               })}
@@ -407,7 +407,7 @@ function Project({
                   alt={`${t} logo`}
                   // width={100}
                   // height={100}
-                  className='h-7 object-contain rounded'
+                  className='h-7 rounded object-contain'
                 />
               ))}
             </section>
@@ -419,7 +419,7 @@ function Project({
             </p>
           </section>
         </div>
-        <div className='divider divider-primary m-0'></div>
+        <div className='divider-primary divider m-0'></div>
       </div>
     </>
   );
@@ -429,13 +429,13 @@ function ProjectButtons({ previewLink, githubLink }) {
   return (
     <section className='flex gap-4'>
       {previewLink ? (
-        <button className='btn btn-primary btn-sm lg:btn-md h-10 text-[10px] rounded-xl'>
+        <button className='btn btn-primary btn-sm h-10 rounded-xl text-[10px] lg:btn-md'>
           <a href={previewLink}>Live preview -&gt;</a>
         </button>
       ) : (
         <></>
       )}
-      <button className='btn btn-secondary btn-sm lg:btn-md h-10 text-[10px] rounded-xl'>
+      <button className='btn btn-secondary btn-sm h-10 rounded-xl text-[10px] lg:btn-md'>
         <a href={githubLink}>View code -&gt;</a>
       </button>
     </section>
