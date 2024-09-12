@@ -9,15 +9,13 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Allen Nguyen',
-  description: "Allen Nguyen's portfolio site",
+  description:
+    "hey, I'm Allen and this is my portfolio. currently: software developer @ Inverted AI, computer engineering @ ubc, vancouver, canada.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang='en'
-      className='scroll-smooth'
-    >
+    <html lang='en' className='scroll-smooth'>
       <body className={`${inter.className} flex min-h-screen flex-col`}>
         <NavBar />
         {children}
@@ -35,10 +33,7 @@ function NavBar() {
   return (
     <div className='navbar fixed top-0 z-50 flex items-center justify-center self-center bg-base-100 font-medium lg:max-w-screen-xl lg:py-4'>
       <div className='navbar-start'>
-        <Link
-          href='/'
-          className='flex items-center gap-2'
-        >
+        <Link href='/' className='flex items-center gap-2'>
           <button className='btn btn-circle btn-neutral h-16 w-16'>
             <Image
               src={miiHeadshot}
@@ -50,11 +45,7 @@ function NavBar() {
       </div>
       <div className='navbar-end'>
         <div className='dropdown dropdown-end'>
-          <div
-            tabIndex={0}
-            role='button'
-            className='btn btn-ghost lg:hidden'
-          >
+          <div tabIndex={0} role='button' className='btn btn-ghost lg:hidden'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               className='h-5 w-5'
