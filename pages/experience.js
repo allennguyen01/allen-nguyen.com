@@ -84,9 +84,9 @@ export default function Experience() {
       <div className='flex flex-col lg:flex-row'>
         <div className='flex flex-col gap-4'>
           <h2 className='ml-6'>work internships</h2>
-          <ol
+          <ul
             id='work-experience'
-            className='relative border-l border-gray-200 dark:border-gray-700 lg:max-w-sm'
+            className='timeline timeline-snap-icon timeline-compact timeline-vertical'
           >
             {workExperience.map((item, index) => (
               <TimelineItem
@@ -94,14 +94,14 @@ export default function Experience() {
                 {...item}
               />
             ))}
-          </ol>
+          </ul>
         </div>
 
         <div className='flex flex-col gap-4'>
           <h2 className='ml-6'>extracurriculars</h2>
-          <ol
+          <ul
             id='extracurriculars'
-            className='relative border-l border-gray-200 dark:border-gray-700 lg:max-w-sm'
+            className='timeline timeline-snap-icon timeline-compact timeline-vertical'
           >
             {extracurriculars.map((item, index) => (
               <TimelineItem
@@ -109,7 +109,7 @@ export default function Experience() {
                 {...item}
               />
             ))}
-          </ol>
+          </ul>
         </div>
       </div>
     </main>
@@ -124,20 +124,34 @@ function TimelineItem({
   icon = <BsPersonWorkspace />,
 }) {
   return (
-    <li className='mb-8 ml-6'>
-      <span className='absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900'>
-        {icon}
-      </span>
-      <h3 className='mb-1 flex items-center text-lg font-semibold text-gray-900 dark:text-white'>
-        {position}
-      </h3>
-      <h4 className='mb-2'>{company}</h4>
-      <time className='mb-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
-        {time}
-      </time>
-      <p className='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
-        {description}
-      </p>
+    <li>
+      <div className='timeline-middle'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 20 20'
+          fill='currentColor'
+          className='h-5 w-5'
+        >
+          <path
+            fillRule='evenodd'
+            d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
+            clipRule='evenodd'
+          />
+        </svg>
+      </div>
+      <div className='timeline-start mb-10'>
+        <h3 className='mb-1 flex items-center text-lg font-semibold text-base-content'>
+          {position}
+        </h3>
+        <h4 className='mb-2'>{company}</h4>
+        <time className='mb-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+          {time}
+        </time>
+        <p className='mb-4 text-base font-normal text-slate-500'>
+          {description}
+        </p>
+      </div>
+      <hr />
     </li>
   );
 }
