@@ -28,6 +28,6 @@ module.exports = {
     require('daisyui'),
   ],
   daisyui: {
-    themes: ['business'],
+    themes: ['sunset', 'autumn'],
   },
 };
