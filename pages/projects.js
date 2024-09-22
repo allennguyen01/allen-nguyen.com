@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { RiGithubLine, RiComputerLine } from 'react-icons/ri';
 
 import PeakFitLogo from '../public/images/projects/peakfit/logo.png';
 import PeakFitHome from '../public/images/projects/peakfit/home.png';
@@ -426,14 +427,18 @@ function ProjectButtons({ previewLink, githubLink }) {
   return (
     <section className='flex gap-4'>
       {previewLink ? (
-        <button className='btn btn-primary btn-sm h-10 rounded-xl text-[10px] lg:btn-md'>
-          <a href={previewLink}>Live preview -&gt;</a>
+        <button className='btn btn-circle btn-primary btn-md lg:btn-lg'>
+          <a href={previewLink}>
+            <RiComputerLine className='h-8 w-8' />
+          </a>
         </button>
       ) : (
         <></>
       )}
-      <button className='btn btn-secondary btn-sm h-10 rounded-xl text-[10px] lg:btn-md'>
-        <a href={githubLink}>View code -&gt;</a>
+      <button className='btn btn-circle btn-secondary btn-md lg:btn-lg'>
+        <a href={githubLink}>
+          <RiGithubLine className='h-8 w-8' />
+        </a>
       </button>
     </section>
   );
