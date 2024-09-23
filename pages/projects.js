@@ -7,13 +7,11 @@ import PeakFitNutrition from '../public/images/projects/peakfit/nutrition.png';
 import PeakFitYou from '../public/images/projects/peakfit/you.png';
 
 import UCalgaryCSSDesktop from '../public/images/projects/ucalgary-css/css-desktop-homepage.jpg';
-import UCalgaryCSSMobile from '../public/images/projects/ucalgary-css/css-phone-homepage.jpg';
 import UCalgaryCSSlogo from '../public/images/projects/ucalgary-css/ucalgarycss-logo.png';
 
 import cgClosetScreen from '../public/images/projects/closetgenie/closet-screen.png';
 import cgOutfitsScreen from '../public/images/projects/closetgenie/outfits-screen.png';
 import cgLaundryScreen from '../public/images/projects/closetgenie/laundry-screen.png';
-import cgProfileScreen from '../public/images/projects/closetgenie/profile-screen.png';
 import cgLogo from '../public/images/projects/closetgenie/closetgenie-logo.png';
 
 import seekicksWebpage from '../public/images/projects/seekicks/webpage.jpg';
@@ -137,14 +135,14 @@ export default function Projects() {
     ];
 
     return (
-      <section className='grid grid-cols-3 items-center justify-center gap-1 lg:w-3/4 lg:gap-4'>
+      <section className='flex justify-center gap-1'>
         {previewImages.map((img) => {
           return (
             <Image
               key={img.alt}
               src={img.src}
               alt={img.alt}
-              className='rounded-md'
+              className='w-1/3 rounded-sm'
             />
           );
         })}
@@ -166,10 +164,6 @@ export default function Projects() {
         src: cgLaundryScreen,
         alt: 'ClosetGenie laundry screen',
       },
-      {
-        src: cgProfileScreen,
-        alt: 'ClosetGenie profile screen',
-      },
     ];
 
     return (
@@ -180,7 +174,7 @@ export default function Projects() {
               key={img.alt}
               src={img.src}
               alt={img.alt}
-              className='w-1/4 rounded-sm'
+              className='w-1/3 rounded-sm'
             />
           );
         })}
@@ -333,7 +327,7 @@ function Project({
 }) {
   return (
     <>
-      <div className='collapse collapse-arrow max-w-4xl items-center justify-center duration-500'>
+      <div className='collapse-arrow collapse max-w-4xl items-center justify-center duration-500'>
         <input
           type='radio'
           name='experience-accordian'
@@ -352,14 +346,12 @@ function Project({
           </div>
         </div>
 
-        <div className='collapse-content flex gap-4 rounded-lg bg-base-200 pt-4'>
-          <section className='flex flex-col gap-4'>
-            <div className='flex flex-row justify-evenly text-lg font-semibold'>
-              <ProjectButtons
-                previewLink={previewLink}
-                githubLink={githubLink}
-              />
-            </div>
+        <div className='collapse-content flex gap-8 rounded-lg bg-base-200 px-6 py-3'>
+          <section className='flex flex-col gap-8'>
+            <ProjectButtons
+              previewLink={previewLink}
+              githubLink={githubLink}
+            />
 
             <div className='text-sm leading-relaxed text-gray-400 lg:text-lg'>
               {summary}
@@ -383,6 +375,10 @@ function Project({
               <span className='text-gray-400'>{datesWorked}</span>
             </div>
           </section>
+
+          <section className='flex max-w-sm items-center'>
+            {previewImages}
+          </section>
         </div>
 
         <div className='divider my-4'></div>
@@ -393,7 +389,7 @@ function Project({
 
 function ProjectButtons({ previewLink, githubLink }) {
   return (
-    <section className='flex gap-4'>
+    <section className='flex justify-evenly gap-4'>
       {previewLink ? (
         <button className='btn btn-circle btn-primary btn-md lg:btn-lg'>
           <a href={previewLink}>
