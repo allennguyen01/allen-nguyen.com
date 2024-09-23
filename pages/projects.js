@@ -1,21 +1,17 @@
 import Image from 'next/image';
+import { RiGithubLine, RiComputerLine } from 'react-icons/ri';
 
 import PeakFitLogo from '../public/images/projects/peakfit/logo.png';
-import PeakFitHome from '../public/images/projects/peakfit/home.png';
 import PeakFitAIBuilder from '../public/images/projects/peakfit/ai-builder.png';
 import PeakFitNutrition from '../public/images/projects/peakfit/nutrition.png';
-import PeakFitExercise from '../public/images/projects/peakfit/exercise.png';
 import PeakFitYou from '../public/images/projects/peakfit/you.png';
-import PeakFitColorPalette from '../public/images/projects/peakfit/color-palette.png';
 
 import UCalgaryCSSDesktop from '../public/images/projects/ucalgary-css/css-desktop-homepage.jpg';
-import UCalgaryCSSMobile from '../public/images/projects/ucalgary-css/css-phone-homepage.jpg';
 import UCalgaryCSSlogo from '../public/images/projects/ucalgary-css/ucalgarycss-logo.png';
 
 import cgClosetScreen from '../public/images/projects/closetgenie/closet-screen.png';
 import cgOutfitsScreen from '../public/images/projects/closetgenie/outfits-screen.png';
 import cgLaundryScreen from '../public/images/projects/closetgenie/laundry-screen.png';
-import cgProfileScreen from '../public/images/projects/closetgenie/profile-screen.png';
 import cgLogo from '../public/images/projects/closetgenie/closetgenie-logo.png';
 
 import seekicksWebpage from '../public/images/projects/seekicks/webpage.jpg';
@@ -26,41 +22,41 @@ import slientOwlLogo from '../public/images/projects/silent-owl/silent-owl-logo.
 
 const techBadges = {
   'React.js':
-    'https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB',
+    'https://img.shields.io/badge/react-%2320232a?style=for-the-badge&logo=react&logoColor=%2361DAFB',
   JavaScript:
-    'https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E',
-  HTML: 'https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white',
-  CSS: 'https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white',
+    'https://img.shields.io/badge/javascript-%23323330?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E',
+  HTML: 'https://img.shields.io/badge/html5-%23E34F26?style=for-the-badge&logo=html5&logoColor=white',
+  CSS: 'https://img.shields.io/badge/css3-%231572B6?style=for-the-badge&logo=css3&logoColor=white',
   TailwindCSS:
-    'https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white',
+    'https://img.shields.io/badge/tailwindcss-%2338B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white',
   'Chakra UI':
-    'https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white',
+    'https://img.shields.io/badge/chakra-%234ED1C5?style=for-the-badge&logo=chakraui&logoColor=white',
   Netlify:
-    'https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7',
+    'https://img.shields.io/badge/netlify-%23000000?style=for-the-badge&logo=netlify&logoColor=#00C7B7',
   'React Native':
-    'https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB',
+    'https://img.shields.io/badge/react_native-%2320232a?style=for-the-badge&logo=react&logoColor=%2361DAFB',
   Figma:
-    'https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white',
+    'https://img.shields.io/badge/figma-%23F24E1E?style=for-the-badge&logo=figma&logoColor=white',
   Expo: 'https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37',
   Python:
     'https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54',
   PyTorch:
-    'https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white',
+    'https://img.shields.io/badge/PyTorch-%23EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white',
   'Google Colab':
-    'https://img.shields.io/badge/Google_Colab-F9AB00.svg?style=for-the-badge&logo=google%20colab&logoColor=white',
+    'https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=google%20colab&logoColor=white',
   Pandas:
-    'https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white',
+    'https://img.shields.io/badge/pandas-%23150458?style=for-the-badge&logo=pandas&logoColor=white',
   NumPy:
-    'https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white',
+    'https://img.shields.io/badge/numpy-%23013243?style=for-the-badge&logo=numpy&logoColor=white',
   'Node.js':
     'https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white',
   MongoDB:
-    'https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white',
+    'https://img.shields.io/badge/MongoDB-%234ea94b?style=for-the-badge&logo=mongodb&logoColor=white',
   'Express.js':
-    'https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB',
-  Java: 'https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white',
+    'https://img.shields.io/badge/express.js-%23404d59?style=for-the-badge&logo=express&logoColor=%2361DAFB',
+  Java: 'https://img.shields.io/badge/java-%23ED8B00?style=for-the-badge&logo=openjdk&logoColor=white',
   TypeScript:
-    'https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white',
+    'https://img.shields.io/badge/typescript-%23007ACC?style=for-the-badge&logo=typescript&logoColor=white',
   ChatGPT:
     'https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white',
 };
@@ -117,17 +113,13 @@ export default function Projects() {
       <Image
         src={src}
         alt={alt}
-        className='rounded-xl'
+        className='w-full rounded-xl'
       />
     );
   }
 
   function PeakFitPreviewImg() {
     const previewImages = [
-      {
-        src: PeakFitHome,
-        alt: 'PeakFit home screen',
-      },
       {
         src: PeakFitAIBuilder,
         alt: 'PeakFit AI builder screen',
@@ -137,28 +129,20 @@ export default function Projects() {
         alt: 'PeakFit nutrition screen',
       },
       {
-        src: PeakFitExercise,
-        alt: 'PeakFit exercise screen',
-      },
-      {
         src: PeakFitYou,
         alt: 'PeakFit you screen',
-      },
-      {
-        src: PeakFitColorPalette,
-        alt: 'PeakFit color palette',
       },
     ];
 
     return (
-      <section className='grid grid-cols-3 items-center justify-center gap-1 lg:w-3/4 lg:gap-4'>
+      <section className='flex justify-center gap-1'>
         {previewImages.map((img) => {
           return (
             <Image
               key={img.alt}
               src={img.src}
               alt={img.alt}
-              className='rounded-md'
+              className='w-1/3 rounded-sm'
             />
           );
         })}
@@ -180,10 +164,6 @@ export default function Projects() {
         src: cgLaundryScreen,
         alt: 'ClosetGenie laundry screen',
       },
-      {
-        src: cgProfileScreen,
-        alt: 'ClosetGenie profile screen',
-      },
     ];
 
     return (
@@ -194,7 +174,7 @@ export default function Projects() {
               key={img.alt}
               src={img.src}
               alt={img.alt}
-              className='w-1/4 rounded-sm'
+              className='w-1/3 rounded-sm'
             />
           );
         })}
@@ -239,32 +219,31 @@ export default function Projects() {
       <Project
         title={'PeakFit'}
         logo={PeakFitLogo}
-        projectType={'Personal Health Startup mobile application'}
+        projectType={'personal health mobile app startup'}
         previewImages={<PeakFitPreviewImg />}
         githubLink={'https://github.com/allennguyen01/peakfit'}
-        summaryPoints={[
-          'Develop a mobile application that provides personalized workout plans and nutrition advice to users based on their fitness goals and preferences',
-          'Design a UI using Figma prototypes and mockups based on customer interviews and validation testing',
-          'Construct a mobile interface using Expo, React Native, and TypeScript for seamless navigation and custom component modularity',
-          'Integrate a RESTful API backend with Node.js and Express.js to store user data and AI generated plans from ChatGPT API',
-        ]}
+        summary={
+          'Cross-platform mobile app that leverages AI to deliver personalized workout and nutrition plans, featuring a user-friendly design and seamless navigation, powered by a RESTful API for dynamic user experiences.'
+        }
         techStack={peakFitTechStack}
         datesWorked={'Jan - Apr 2024'}
       />
 
       <Project
-        title={"University of Calgary Chinese Students' Society"}
+        title={"UCalgary Chinese Students' Society"}
         logo={UCalgaryCSSlogo}
-        projectType={'Business website'}
-        previewImages={<UCalgaryCSSPreviewImg />}
+        projectType={'university club website'}
+        previewImages={
+          <SinglePreviewImg
+            src={UCalgaryCSSDesktop}
+            alt='UCalgary CSS desktop view'
+          />
+        }
         previewLink={'https://ucalgarycss.com/'}
         githubLink={'https://github.com/allennguyen01/ucalgary-css'}
-        summaryPoints={[
-          'Develop a website to display information regarding club events, member/executive recruitment, and community engagement resources',
-          'Built an intuitive user interface using ReactJS and JavaScript for seamless navigation and custom component modularity',
-          'Employed UI/UX design with TailwindCSS and Chakra UI to ensure consistent styling and responsiveness across various devices',
-          'Deployed the website with Netlify and Google Domains to increase SEO and view analytical trends',
-        ]}
+        summary={
+          "Desktop and mobile responsive website for University of Calgary's largest Chinese club, featuring event info, member recruitment, and community resources, with tailored UI/UX design informed by user interviews and Google analytics."
+        }
         techStack={ucalgaryCSSTechStack}
         datesWorked={'July - Aug 2023'}
       />
@@ -272,14 +251,12 @@ export default function Projects() {
       <Project
         title={'ClosetGenie'}
         logo={cgLogo}
-        projectType={'Mobile application'}
+        projectType={'outfit recommendation mobile app'}
         previewImages={<ClosetGeniePreviewImg />}
         githubLink={'https://github.com/allennguyen01/ClosetGenie'}
-        summaryPoints={[
-          'Design a interactive frontend using Figma prototypes and mockups based on custom design specifications and requirements',
-          'Construct reusable React Native components for a responsive IOS/Android app on Expo and add styling with TailwindCSS framework',
-          'Integrated REST API endpoints from the backend to retrieve and send data to the cloud with JavaScript',
-        ]}
+        summary={
+          'Mobile app that simplifies daily outfit selection with a modern recommendation algorithm, laundry reminders, and wardrobe management, improving user confidence and convenience while reducing decision fatigue.'
+        }
         techStack={closetgenieTechStack}
         datesWorked={'Jan - Apr 2023'}
       />
@@ -301,7 +278,7 @@ export default function Projects() {
       <Project
         title={'SeeKicks'}
         logo={seekicksLogo}
-        projectType={'Machine learning application'}
+        projectType={'sneaker machine learning image recognition'}
         previewImages={
           <SinglePreviewImg
             src={seekicksWebpage}
@@ -309,11 +286,9 @@ export default function Projects() {
           />
         }
         githubLink={'https://github.com/allennguyen01/SeeKicks'}
-        summaryPoints={[
-          'Implemented a machine learning image recognition app that identifies over 850 sneaker models with 98% accuracy',
-          'Tested and trained a PyTorch convolutional neural network model with an manipulated dataset of 50 000 images using Python',
-          'Deployed the web application using Heroku and used Streamlit to construct the UI',
-        ]}
+        summary={
+          'Machine learning image recognition app that accurately identifies over 850 sneaker models with 98% accuracy using a convolutional neural network, deployed on Heroku with a user-friendly Streamlit interface.'
+        }
         techStack={seekicksTechStack}
         datesWorked={'Jan - Apr 2021'}
       />
@@ -321,7 +296,7 @@ export default function Projects() {
       <Project
         title={'Silent Owl'}
         logo={slientOwlLogo}
-        projectType={'BC Hacks 2.0 Hackathon Project'}
+        projectType={'java hackathon project'}
         previewImages={
           <SinglePreviewImg
             src={slientOwlApp}
@@ -329,10 +304,8 @@ export default function Projects() {
           />
         }
         githubLink={'https://github.com/allennguyen01/Silent-Owl'}
-        summaryPoints={[
-          "Developed a Java app that listens to a user's microphone and alerts them if they are being too loud",
-          'Integrated a user-friendly GUI with a Java Swing frontend and backend using Java Sound API',
-          'Awarded top 3 in first-time hackers category',
+        summary={[
+          'Java native desktop app that monitors microphone volume and alerts users if they are too loud, featuring a user-friendly GUI, and recognized as the best project in the begineers hackathon.',
         ]}
         techStack={silentOwlTechStack}
         datesWorked={'Feb 2021'}
@@ -348,75 +321,66 @@ function Project({
   previewImages,
   previewLink = '',
   githubLink,
-  summaryPoints,
+  summary,
   techStack,
   datesWorked,
 }) {
   return (
     <>
-      <div className='collapse collapse-arrow max-w-4xl items-center justify-center'>
-        <input type='checkbox' />
-        <div className='collapse-title flex flex-col gap-4'>
-          <section className='flex items-center gap-2 lg:gap-4'>
+      <div className='items-center justify-center lg:max-w-4xl'>
+        <div className='flex items-center justify-between rounded bg-base-300 p-4'>
+          <div className='flex max-w-[250px] items-center gap-2 lg:max-w-none lg:gap-4'>
             <Image
               src={logo}
               alt={`${title} logo`}
-              className='w-20 rounded-lg'
+              className='w-10 rounded-lg lg:w-20'
             />
 
             <div>
               <h3>{title}</h3>
-              <p className='text-base text-gray-400 lg:text-xl'>
-                {projectType}
-              </p>
+              <p className='text-base lg:text-xl'>{projectType}</p>
+            </div>
+          </div>
+
+          <ProjectButtons
+            previewLink={previewLink}
+            githubLink={githubLink}
+          />
+        </div>
+
+        <div className='flex flex-col-reverse gap-8 bg-base-200 p-6 lg:flex-row'>
+          <section className='flex flex-col gap-8'>
+            <div className='text-base leading-relaxed lg:text-lg'>
+              {summary}
+            </div>
+
+            <div className='flex flex-wrap items-center gap-2'>
+              <span className='text-sm font-semibold lg:text-base'>
+                Tech Stack:{' '}
+              </span>
+              {techStack.map((t) => (
+                <picture key={t}>
+                  <img
+                    src={techBadges[t]}
+                    alt={`${t} logo`}
+                    className='rounded object-contain'
+                  />
+                </picture>
+              ))}
+            </div>
+
+            <div className='text-sm lg:text-base'>
+              <span className='font-bold'>Date: </span>
+              <span className=''>{datesWorked}</span>
             </div>
           </section>
 
-          <section className='flex flex-wrap justify-center gap-2 lg:mx-10'>
+          <section className='flex max-w-sm items-center'>
             {previewImages}
           </section>
         </div>
 
-        <div className='collapse-content flex flex-col gap-4 rounded-lg bg-base-200 pt-4 lg:mx-10 lg:px-6'>
-          <section className='flex flex-row justify-evenly text-lg font-semibold'>
-            <ProjectButtons
-              previewLink={previewLink}
-              githubLink={githubLink}
-            />
-          </section>
-
-          <section>
-            <p className='lg:text-xl'>Summary</p>
-            <ul className='list-inside list-disc text-sm leading-relaxed text-gray-400 lg:text-base'>
-              {summaryPoints.map((pt) => {
-                return <li key={pt}>{pt}</li>;
-              })}
-            </ul>
-          </section>
-
-          <section>
-            <p>Technologies</p>
-            <section className='flex flex-wrap gap-2'>
-              {techStack.map((t) => (
-                <img
-                  key={t}
-                  src={techBadges[t]}
-                  alt={`${t} logo`}
-                  // width={100}
-                  // height={100}
-                  className='h-7 rounded object-contain'
-                />
-              ))}
-            </section>
-          </section>
-
-          <section>
-            <p>
-              Date <span className='text-gray-400'>{datesWorked}</span>
-            </p>
-          </section>
-        </div>
-        <div className='divider-primary divider m-0'></div>
+        <div className='divider my-4'></div>
       </div>
     </>
   );
@@ -424,16 +388,20 @@ function Project({
 
 function ProjectButtons({ previewLink, githubLink }) {
   return (
-    <section className='flex gap-4'>
+    <section className='flex flex-col justify-evenly gap-1 lg:flex-row lg:gap-4'>
       {previewLink ? (
-        <button className='btn btn-primary btn-sm h-10 rounded-xl text-[10px] lg:btn-md'>
-          <a href={previewLink}>Live preview -&gt;</a>
+        <button className='btn btn-circle btn-primary btn-sm lg:btn-lg'>
+          <a href={previewLink}>
+            <RiComputerLine className='h-6 w-6 lg:h-8 lg:w-8' />
+          </a>
         </button>
       ) : (
         <></>
       )}
-      <button className='btn btn-secondary btn-sm h-10 rounded-xl text-[10px] lg:btn-md'>
-        <a href={githubLink}>View code -&gt;</a>
+      <button className='btn btn-circle btn-secondary btn-sm lg:btn-lg'>
+        <a href={githubLink}>
+          <RiGithubLine className='h-6 w-6 lg:h-8 lg:w-8' />
+        </a>
       </button>
     </section>
   );
