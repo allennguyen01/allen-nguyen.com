@@ -327,35 +327,30 @@ function Project({
 }) {
   return (
     <>
-      <div className='collapse-arrow collapse max-w-4xl items-center justify-center duration-500'>
-        <input
-          type='radio'
-          name='experience-accordian'
-          defaultChecked
-        />
-        <div className='collapse-title flex items-center gap-2 bg-base-300 lg:gap-4'>
-          <Image
-            src={logo}
-            alt={`${title} logo`}
-            className='w-20 rounded-lg'
-          />
-
-          <div>
-            <h3>{title}</h3>
-            <p className='text-base text-gray-400 lg:text-xl'>{projectType}</p>
-          </div>
-        </div>
-
-        <div className='collapse-content flex gap-8 rounded-lg bg-base-200 px-6 py-3'>
-          <section className='flex flex-col gap-8'>
-            <ProjectButtons
-              previewLink={previewLink}
-              githubLink={githubLink}
+      <div className='max-w-4xl items-center justify-center'>
+        <div className='flex items-center justify-between gap-2 rounded bg-base-300 p-4'>
+          <div className='flex w-max items-center lg:gap-4'>
+            <Image
+              src={logo}
+              alt={`${title} logo`}
+              className='w-20 rounded-lg'
             />
 
-            <div className='text-sm leading-relaxed text-gray-400 lg:text-lg'>
-              {summary}
+            <div>
+              <h3>{title}</h3>
+              <p className='text-base lg:text-xl'>{projectType}</p>
             </div>
+          </div>
+
+          <ProjectButtons
+            previewLink={previewLink}
+            githubLink={githubLink}
+          />
+        </div>
+
+        <div className='flex gap-8 bg-base-200 p-6'>
+          <section className='flex flex-col gap-8'>
+            <div className='text-sm leading-relaxed lg:text-lg'>{summary}</div>
 
             <div className='flex flex-wrap gap-2'>
               <span className='font-semibold'>Tech Stack: </span>
@@ -372,7 +367,7 @@ function Project({
 
             <div>
               <span className='font-bold'>Date: </span>
-              <span className='text-gray-400'>{datesWorked}</span>
+              <span className=''>{datesWorked}</span>
             </div>
           </section>
 
