@@ -24,7 +24,6 @@ export default function AboutMe() {
         width={500}
         height={250}
         className='rounded-lg'
-        unoptimized
       />
 
       <div className='flex flex-col gap-2'>
