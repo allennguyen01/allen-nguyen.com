@@ -327,13 +327,13 @@ function Project({
 }) {
   return (
     <>
-      <div className='max-w-4xl items-center justify-center'>
-        <div className='flex items-center justify-between gap-2 rounded bg-base-300 p-4'>
-          <div className='flex w-max items-center lg:gap-4'>
+      <div className='items-center justify-center lg:max-w-4xl'>
+        <div className='flex items-center justify-between rounded bg-base-300 p-4'>
+          <div className='flex max-w-[250px] items-center gap-2 lg:max-w-none lg:gap-4'>
             <Image
               src={logo}
               alt={`${title} logo`}
-              className='w-20 rounded-lg'
+              className='w-10 rounded-lg lg:w-20'
             />
 
             <div>
@@ -348,12 +348,16 @@ function Project({
           />
         </div>
 
-        <div className='flex gap-8 bg-base-200 p-6'>
+        <div className='flex flex-col-reverse gap-8 bg-base-200 p-6 lg:flex-row'>
           <section className='flex flex-col gap-8'>
-            <div className='text-sm leading-relaxed lg:text-lg'>{summary}</div>
+            <div className='text-base leading-relaxed lg:text-lg'>
+              {summary}
+            </div>
 
-            <div className='flex flex-wrap gap-2'>
-              <span className='font-semibold'>Tech Stack: </span>
+            <div className='flex flex-wrap items-center gap-2'>
+              <span className='text-sm font-semibold lg:text-base'>
+                Tech Stack:{' '}
+              </span>
               {techStack.map((t) => (
                 <picture key={t}>
                   <img
@@ -365,7 +369,7 @@ function Project({
               ))}
             </div>
 
-            <div>
+            <div className='text-sm lg:text-base'>
               <span className='font-bold'>Date: </span>
               <span className=''>{datesWorked}</span>
             </div>
@@ -384,19 +388,19 @@ function Project({
 
 function ProjectButtons({ previewLink, githubLink }) {
   return (
-    <section className='flex justify-evenly gap-4'>
+    <section className='flex flex-col justify-evenly gap-1 lg:flex-row lg:gap-4'>
       {previewLink ? (
-        <button className='btn btn-circle btn-primary btn-md lg:btn-lg'>
+        <button className='btn btn-circle btn-primary btn-sm lg:btn-lg'>
           <a href={previewLink}>
-            <RiComputerLine className='h-8 w-8' />
+            <RiComputerLine className='h-6 w-6 lg:h-8 lg:w-8' />
           </a>
         </button>
       ) : (
         <></>
       )}
-      <button className='btn btn-circle btn-secondary btn-md lg:btn-lg'>
+      <button className='btn btn-circle btn-secondary btn-sm lg:btn-lg'>
         <a href={githubLink}>
-          <RiGithubLine className='h-8 w-8' />
+          <RiGithubLine className='h-6 w-6 lg:h-8 lg:w-8' />
         </a>
       </button>
     </section>
