@@ -142,7 +142,7 @@ function TimelineItem({ position, company, time, description, logo, link }) {
   return (
     <li>
       <div className='timeline-middle'>
-        <button className='btn btn-circle h-10 w-10 border-0 bg-white p-0 lg:h-16 lg:w-16'>
+        <div className='flex h-12 w-12 items-center justify-center rounded-full border-0 bg-white p-0 transition-colors duration-200 ease-in-out hover:cursor-pointer hover:bg-base-300 lg:h-16 lg:w-16'>
           <Link
             href={link}
             target='_blank'
@@ -150,20 +150,19 @@ function TimelineItem({ position, company, time, description, logo, link }) {
           >
             <Image
               src={logo}
-              className='h-8 w-8 rounded lg:h-14 lg:w-14'
+              className='h-10 w-10 rounded lg:h-14 lg:w-14'
+              alt={`${company} logo`}
             />
           </Link>
-        </button>
+        </div>
       </div>
       <div className='timeline-start mb-10 flex w-full max-w-sm flex-1 flex-col gap-2 rounded-lg bg-base-200 p-2 lg:mx-2 lg:p-4'>
-        <h3 className='flex items-center text-lg font-semibold text-base-content'>
-          {position}
-        </h3>
-        <h4>{company}</h4>
-        <time className='block text-xs font-normal leading-none text-info lg:text-sm'>
+        <h4 className='flex items-center text-base-content'>{position}</h4>
+        <h5 className='text-error'>{company}</h5>
+        <time className='block text-sm font-normal leading-none text-warning lg:text-base'>
           {time}
         </time>
-        <p className='text-sm font-normal text-base-content lg:text-base'>
+        <p className='text-sm font-normal leading-relaxed text-base-content lg:text-base'>
           {description}
         </p>
       </div>
