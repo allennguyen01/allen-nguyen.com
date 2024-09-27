@@ -1,7 +1,5 @@
-import { BsPersonWorkspace } from 'react-icons/bs';
-import { PiPottedPlantBold } from 'react-icons/pi';
-import { FaChalkboardTeacher } from 'react-icons/fa';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import InvertedAILogo from '@/public/images/experience/invertedai-logo.png';
 import VoronoiLogo from '@/public/images/experience/voronoi-logo.png';
@@ -12,7 +10,7 @@ import UBCLaunchpadLogo from '@/public/images/experience/ubclaunchpad-logo.png';
 import UBCAppliedScienceLogo from '@/public/images/experience/ubcapsc-logo.png';
 import UCalgaryCSSLogo from '@/public/images/experience/ucalgarycss-logo.png';
 import VSALogo from '@/public/images/experience/vsa-logo.png';
-import UBCWasteNautsLogo from '@/public/images/experience/ubcwastenauts-logo.jpg';
+import UBCWasteNautsLogo from '@/public/images/experience/ubcwastenauts-logo.png';
 
 const workExperience = [
   {
@@ -21,6 +19,7 @@ const workExperience = [
     time: 'September 2024 - Present',
     description: '🚗 autonomous vehicles UI and web',
     logo: InvertedAILogo,
+    link: 'https://www.inverted.ai/',
   },
   {
     position: 'Software Engineer',
@@ -28,6 +27,7 @@ const workExperience = [
     time: 'September 2023 - December 2023',
     description: '🩻 medical imaging processing and AI software',
     logo: VoronoiLogo,
+    link: 'https://www.voronoihealthanalytics.com/',
   },
   {
     position: 'Software Engineer',
@@ -35,6 +35,7 @@ const workExperience = [
     time: 'September 2022 - December 2022',
     description: '📈 internal data collection full stack web application',
     logo: BCILogo,
+    link: 'https://www.bci.ca/',
   },
   {
     position: 'Engineering Projects Instructor',
@@ -42,6 +43,7 @@ const workExperience = [
     time: 'January 2022 - August 2022',
     description: '🧑🏻‍🏫 STEM education in coding, science, and engineering',
     logo: ZenMakerLabLogo,
+    link: 'https://www.zenmakerlab.com/',
   },
 ];
 
@@ -52,6 +54,7 @@ const extracurriculars = [
     time: 'May 2024 - Present',
     description: '💵 sponsorship and partnership creation',
     logo: UBCLaunchpadLogo,
+    link: 'https://www.ubclaunchpad.com/',
   },
   {
     position: 'Senior Orientation Leader',
@@ -59,6 +62,7 @@ const extracurriculars = [
     time: 'May 2024 - August 2024',
     description: '🫂 organizational team management for orientation day',
     logo: UBCAppliedScienceLogo,
+    link: 'https://apsc.ubc.ca/',
   },
   {
     position: 'Software Developer',
@@ -66,6 +70,7 @@ const extracurriculars = [
     time: 'September 2023 - April 2024',
     description: '👨🏻‍⚕️ seizure tracking mobile application',
     logo: UBCLaunchpadLogo,
+    link: 'https://www.ubclaunchpad.com/',
   },
   {
     position: 'VP Development',
@@ -73,6 +78,7 @@ const extracurriculars = [
     time: 'July 2023 - Present',
     description: "💻 web development for club's landing website",
     logo: UCalgaryCSSLogo,
+    link: 'https://ucalgarycss.com/',
   },
   {
     position: 'Socials Coordinator',
@@ -80,6 +86,7 @@ const extracurriculars = [
     time: 'September 2023 - April 2024',
     description: '🎊 internal team bonding events and engagement',
     logo: VSALogo,
+    link: 'https://www.instagram.com/ubcvsa/',
   },
   {
     position: 'Renewable Energy Team Lead',
@@ -87,6 +94,7 @@ const extracurriculars = [
     time: 'May 2021 - April 2022',
     description: '🔋 sustainable renewable energy harvesting system',
     logo: UBCWasteNautsLogo,
+    link: 'https://wastenautsubc.netlify.app/',
   },
 ];
 
@@ -130,21 +138,21 @@ export default function Experience() {
   );
 }
 
-function TimelineItem({
-  position,
-  company,
-  time,
-  description = '',
-  logo = UBCLaunchpadLogo,
-}) {
+function TimelineItem({ position, company, time, description, logo, link }) {
   return (
     <li>
       <div className='timeline-middle'>
         <button className='btn btn-circle h-16 w-16 border-0 bg-white p-0'>
-          <Image
-            src={logo}
-            className='h-14 w-14 rounded'
-          />
+          <Link
+            href={link}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <Image
+              src={logo}
+              className='h-14 w-14 rounded'
+            />
+          </Link>
         </button>
       </div>
       <div className='timeline-start mx-2 mb-10 w-full max-w-sm flex-1 rounded-lg bg-base-200 p-4'>
@@ -152,10 +160,10 @@ function TimelineItem({
           {position}
         </h3>
         <h4 className='mb-2'>{company}</h4>
-        <time className='mb-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+        <time className='mb-2 block text-sm font-normal leading-none text-info'>
           {time}
         </time>
-        <p className='text-base font-normal text-slate-500'>{description}</p>
+        <p className='text-base font-normal text-base-content'>{description}</p>
       </div>
       <hr />
     </li>
