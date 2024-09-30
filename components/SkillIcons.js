@@ -4,13 +4,17 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 import JavaScript from '../public/skills/languages/javascript.png';
-import HTML from '../public/skills/languages/html5.png';
-import CSS from '../public/skills/languages/css3.png';
+import TypeScript from '../public/skills/languages/typescript.png';
 import Python from '../public/skills/languages/python.png';
+import Java from '../public/skills/languages/java.png';
 import Cpp from '../public/skills/languages/c++.png';
 import C from '../public/skills/languages/c.png';
+import SQL from '../public/skills/languages/sql.png';
+import HTML from '../public/skills/languages/html5.png';
+import CSS from '../public/skills/languages/css3.png';
 
 import React from '../public/skills/frameworks-libraries/react.png';
+import ReactNative from '../public/skills/frameworks-libraries/react-native.png';
 import Node from '../public/skills/frameworks-libraries/node.png';
 import Express from '../public/skills/frameworks-libraries/express.png';
 import Next from '../public/skills/frameworks-libraries/next.png';
@@ -29,18 +33,22 @@ import Netlify from '../public/skills/tools/netlify.png';
 export default function SkillIcons() {
   const languages = [
     { name: 'javascript', image: JavaScript },
-    { name: 'html5', image: HTML },
-    { name: 'css3', image: CSS },
+    { name: 'typescript', image: TypeScript },
     { name: 'python', image: Python },
+    { name: 'java', image: Java },
     { name: 'c++', image: Cpp },
     { name: 'c', image: C },
+    { name: 'sql', image: SQL },
+    { name: 'html5', image: HTML },
+    { name: 'css3', image: CSS },
   ];
   const frameworks = [
     { name: 'react', image: React },
+    { name: 'react native', image: ReactNative },
+    { name: 'tailwind-css', image: TailwindCSS },
     { name: 'node', image: Node },
     { name: 'express', image: Express },
     { name: 'next', image: Next },
-    { name: 'tailwind-css', image: TailwindCSS },
     { name: 'pandas', image: Pandas },
     { name: 'scikit-learn', image: ScikitLearn },
     { name: 'numpy', image: Numpy },
@@ -74,8 +82,8 @@ export default function SkillIcons() {
 
 function SkillType({ type, skills }) {
   const gridVariants = {
-    'frameworks-libraries': 'grid-cols-4 lg:grid-cols-8',
     languages: 'grid-cols-3 lg:grid-cols-6',
+    'frameworks-libraries': 'grid-cols-3 lg:grid-cols-6',
     tools: 'grid-cols-3 lg:grid-cols-6',
   };
 
@@ -90,7 +98,7 @@ function SkillType({ type, skills }) {
           <motion.div
             key={s.name}
             whileHover={{ scale: 1.2 }}
-            className='flex flex-col items-center justify-center'
+            className='flex min-w-[80px] flex-col items-center justify-center'
           >
             <Image
               src={s.image}
