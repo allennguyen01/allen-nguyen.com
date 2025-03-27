@@ -25,7 +25,7 @@ export default function ContactIcons() {
     {
       name: 'resume',
       icon: <RiFilePaper2Fill className='h-12 w-12 lg:h-16 lg:w-16' />,
-      link: './Allen Nguyen Resume (Aug 26 2024).pdf',
+      link: './resume.pdf',
     },
     {
       name: 'email',

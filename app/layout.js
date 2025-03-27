@@ -76,7 +76,7 @@ function NavBar() {
           </div>
           <ul
             tabIndex={0}
-            className='menu dropdown-content rounded-box menu-sm z-[1] mt-3 w-52 bg-base-100 p-2 shadow'
+            className='menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow'
           >
             <Link
               href='#experience'
@@ -91,8 +91,8 @@ function NavBar() {
               projects
             </Link>
             <Link
-              href='./Allen Nguyen Resume (Aug 26 2024).pdf'
-              className='rounded-lg bg-accent px-4 py-2 text-black hover:bg-accent-focus'
+              href='./resume.pdf'
+              className='hover:bg-accent-focus rounded-lg bg-accent px-4 py-2 text-black'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -118,8 +118,8 @@ function NavBar() {
             projects
           </Link>
           <Link
-            href='./Allen Nguyen Resume (Aug 26 2024).pdf'
-            className='rounded-lg bg-accent px-4 py-2 text-black hover:bg-accent-focus'
+            href='./resume.pdf'
+            className='hover:bg-accent-focus rounded-lg bg-accent px-4 py-2 text-black'
             target='_blank'
             rel='noopener noreferrer'
           >
