@@ -26,13 +26,14 @@ export default function AboutMe() {
         className='rounded-lg'
       />
 
-      <div className='flex flex-col gap-2'>
-        <h2>about me</h2>
-        <p className='max-w-2xl text-left'>
+      <section className='flex max-w-2xl flex-col gap-2 text-left'>
+        <h2 className='text-center'>about me</h2>
+        <p>
           I am an inspiring <i>software engineer</i> focused on building unique
           products that solve meaningful problems. Right now, I am in my 5th
           year of Computer Engineering at the University of British Columbia.
-          <br /> <br />
+        </p>
+        <div>
           When I&apos;m not working, you can find me...
           <ul className='emoji-list list-inside'>
             <li>Running through the streets of Vancouver</li>
@@ -41,8 +42,8 @@ export default function AboutMe() {
             </li>
             <li>Discovering new R&B and rap music</li>
           </ul>
-        </p>
-      </div>
+        </div>
+      </section>
 
       <div className='flex flex-col gap-2'>
         <h2>contact me!</h2>
