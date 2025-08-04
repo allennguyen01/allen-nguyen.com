@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import OntraccrLogo from '@/public/images/experience/ontraccr-logo.jpg';
 import InvertedAILogo from '@/public/images/experience/invertedai-logo.png';
 import VoronoiLogo from '@/public/images/experience/voronoi-logo.png';
 import BCILogo from '@/public/images/experience/bci-logo.svg';
@@ -15,32 +16,41 @@ import UBCWasteNautsLogo from '@/public/images/experience/ubcwastenauts-logo.png
 const workExperience = [
   {
     position: 'Frontend Developer',
-    company: 'Inverted AI • Co-op',
-    time: 'September 2024 - Present',
-    description: '🚗 autonomous vehicles UI and web',
+    company: 'Ontraccr Technologies',
+    time: 'May - Aug. 2025',
+    description:
+      '🏗️ construction project management mobile and web application',
+    logo: OntraccrLogo,
+    link: 'https://www.ontraccr.com/',
+  },
+  {
+    position: 'Frontend Developer',
+    company: 'Inverted AI',
+    time: 'Sep. 2024 - Apr. 2025',
+    description: '🚗 autonomous vehicles web tools',
     logo: InvertedAILogo,
     link: 'https://www.inverted.ai/',
   },
   {
     position: 'Software Engineer',
-    company: 'Voronoi Health Analytics • Co-op',
-    time: 'September 2023 - December 2023',
+    company: 'Voronoi Health Analytics',
+    time: 'Sep. - Dec. 2023',
     description: '🩻 medical imaging processing and AI software',
     logo: VoronoiLogo,
     link: 'https://www.voronoihealthanalytics.com/',
   },
   {
     position: 'Software Engineer',
-    company: 'BCI • Co-op',
-    time: 'September 2022 - December 2022',
+    company: 'BCI',
+    time: 'Sep. - Dec. 2022',
     description: '📈 internal data collection full stack web application',
     logo: BCILogo,
     link: 'https://www.bci.ca/',
   },
   {
     position: 'Engineering Projects Instructor',
-    company: 'Zen Maker Lab • Co-op',
-    time: 'January 2022 - August 2022',
+    company: 'Zen Maker Lab',
+    time: 'Jan. - Aug. 2022',
     description: '🧑🏻‍🏫 STEM education in coding, science, and engineering',
     logo: ZenMakerLabLogo,
     link: 'https://www.zenmakerlab.com/',
@@ -51,7 +61,7 @@ const extracurriculars = [
   {
     position: 'Sponsorship Coordinator',
     company: 'UBC Launchpad',
-    time: 'May 2024 - Present',
+    time: 'May 2024 - Apr. 2025',
     description: '💵 sponsorship and partnership creation',
     logo: UBCLaunchpadLogo,
     link: 'https://www.ubclaunchpad.com/',
@@ -59,7 +69,7 @@ const extracurriculars = [
   {
     position: 'Senior Orientation Leader',
     company: 'UBC Applied Science',
-    time: 'May 2024 - August 2024',
+    time: 'May - Aug. 2024',
     description: '🫂 organizational team management for orientation day',
     logo: UBCAppliedScienceLogo,
     link: 'https://apsc.ubc.ca/',
@@ -67,7 +77,7 @@ const extracurriculars = [
   {
     position: 'Software Developer',
     company: 'UBC Launchpad',
-    time: 'September 2023 - April 2024',
+    time: 'Sep. 2023 - Apr. 2024',
     description: '👨🏻‍⚕️ seizure tracking mobile application',
     logo: UBCLaunchpadLogo,
     link: 'https://www.ubclaunchpad.com/',
@@ -75,7 +85,7 @@ const extracurriculars = [
   {
     position: 'VP Development',
     company: "UCalgary Chinese Students' Society",
-    time: 'July 2023 - Present',
+    time: 'Jul. 2023 - Apr. 2024',
     description: "💻 web development for club's landing website",
     logo: UCalgaryCSSLogo,
     link: 'https://ucalgarycss.com/',
@@ -83,7 +93,7 @@ const extracurriculars = [
   {
     position: 'Socials Coordinator',
     company: 'UBC Vietnamese Students Association',
-    time: 'September 2023 - April 2024',
+    time: 'Sep. 2023 - Apr. 2024',
     description: '🎊 internal team bonding events and engagement',
     logo: VSALogo,
     link: 'https://www.instagram.com/ubcvsa/',
@@ -91,7 +101,7 @@ const extracurriculars = [
   {
     position: 'Renewable Energy Team Lead',
     company: 'UBC WasteNauts',
-    time: 'May 2021 - April 2022',
+    time: 'May 2021 - Apr. 2022',
     description: '🔋 sustainable renewable energy harvesting system',
     logo: UBCWasteNautsLogo,
     link: 'https://wastenautsubc.netlify.app/',
@@ -143,17 +153,17 @@ function TimelineItem({ position, company, time, description, logo, link }) {
     <li>
       <div className='timeline-middle'>
         <div className='flex h-12 w-12 items-center justify-center rounded-full border-0 bg-white p-0 transition-colors duration-200 ease-in-out hover:cursor-pointer hover:bg-base-300 lg:h-16 lg:w-16'>
-          <Link
+          <a
             href={link}
             target='_blank'
             rel='noopener noreferrer'
           >
             <Image
               src={logo}
-              className='h-10 w-10 rounded lg:h-14 lg:w-14'
+              className='h-10 w-10 rounded-full lg:h-14 lg:w-14'
               alt={`${company} logo`}
             />
-          </Link>
+          </a>
         </div>
       </div>
       <div className='timeline-start mb-10 flex w-full max-w-sm flex-1 flex-col gap-2 rounded-lg bg-base-200 p-2 lg:mx-2 lg:p-4'>

@@ -10,7 +10,13 @@ export default function AboutMe() {
     >
       <h1>hey, I&apos;m Allen 👋</h1>
       <p className='lg:text-xl'>
-        currently: software developer @ Inverted AI
+        currently: full-stack software developer @{' '}
+        <a
+          href='https://www.ontraccr.com/'
+          className='link link-primary'
+        >
+          Ontraccr Technologies
+        </a>
         <br />
         <br />
         🎒 computer engineering @ ubc
