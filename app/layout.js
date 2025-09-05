@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
 
 function NavBar() {
   return (
-    <div className='navbar fixed top-0 z-50 flex w-full items-center justify-center self-center bg-base-300 bg-opacity-95 font-medium drop-shadow-sm backdrop-blur lg:px-40 lg:py-4'>
+    <div className='navbar fixed top-0 z-50 flex w-full items-center justify-center self-center bg-base-300 bg-opacity-20 font-medium drop-shadow-sm backdrop-blur lg:px-40 lg:py-4'>
       <div className='navbar-start'>
         <Link
           href='/'
