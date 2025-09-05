@@ -8,7 +8,7 @@ export default function AboutMe() {
       id='about-me'
       className='m-8 mt-24 flex min-h-screen flex-col items-center justify-center gap-8 text-center text-base lg:mt-32 lg:text-lg'
     >
-      <h1 className='text-slate-50'>hey, I&apos;m Allen 👋</h1>
+      <h1>hey, I&apos;m Allen 👋</h1>
       <p className='lg:text-xl'>
         <span className='text-slate-50'>currently:</span> finishing last
         semester @ UBC, graduating in December 2025
@@ -21,12 +21,20 @@ export default function AboutMe() {
         >
           Jukeboxd
         </a>
-        , Letterboxd for music lovers
+        ,{' '}
+        <a
+          href='https://letterboxd.com/'
+          target='_blank'
+          className='link'
+        >
+          Letterboxd
+        </a>
+        -clone for music lovers
         <br />
         <br />
-        🎒 computer engineering @ ubc
+        🎒 Computer Engineering @ UBC
         <br />
-        📍 vancouver, canada
+        📍 Vancouver, Canada
       </p>
 
       <Image

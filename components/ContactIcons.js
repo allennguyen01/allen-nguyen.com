@@ -35,7 +35,7 @@ export default function ContactIcons() {
   ];
 
   return (
-    <div className='flex gap-4'>
+    <div className='flex gap-8'>
       {contacts.map((contact) => (
         <div
           key={contact.name}
