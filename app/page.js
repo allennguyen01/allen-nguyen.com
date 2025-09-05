@@ -8,7 +8,7 @@ export default function Home() {
       <AboutMe />
       <div
         className='divider'
-        id='experience'
+        id='experiences'
       ></div>
       <Experience />
       <div

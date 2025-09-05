@@ -106,7 +106,7 @@ function NavBar() {
           <ThemeSwap />
 
           <Link
-            href='#experience'
+            href='#experiences'
             className='rounded-lg px-4 py-2 hover:bg-black'
           >
             experience
