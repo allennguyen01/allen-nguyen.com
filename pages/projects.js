@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import { RiGithubLine, RiComputerLine } from 'react-icons/ri';
 
+import JukeboxdLogo from '../public/images/projects/jukeboxd/logo.svg';
+import JukeboxdProfilePage from '../public/images/projects/jukeboxd/profile.png';
+
 import PeakFitLogo from '../public/images/projects/peakfit/logo.png';
 import PeakFitAIBuilder from '../public/images/projects/peakfit/ai-builder.png';
 import PeakFitNutrition from '../public/images/projects/peakfit/nutrition.png';
@@ -59,9 +62,23 @@ const techBadges = {
     'https://img.shields.io/badge/typescript-%23007ACC?style=for-the-badge&logo=typescript&logoColor=white',
   ChatGPT:
     'https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white',
+  ShadcnUI:
+    'https://img.shields.io/badge/shadcn%2Fui-000?logo=shadcnui&logoColor=fff',
+  Supabase:
+    'https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=fff',
+  Vite: 'https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff',
 };
 
 export default function Projects() {
+  const jukeboxdTechStack = [
+    'React.js',
+    'TypeScript',
+    'TailwindCSS',
+    'ShadcnUI',
+    'Supabase',
+    'Vite',
+  ];
+
   const peakFitTechStack = [
     'React Native',
     'Expo',
@@ -217,6 +234,23 @@ export default function Projects() {
       <h1>projects 📚</h1>
 
       <Project
+        title='Jukeboxd'
+        logo={JukeboxdLogo}
+        projectType='music rating and discovery web app'
+        previewImages={
+          <SinglePreviewImg
+            src={JukeboxdProfilePage}
+            alt='Jukeboxd profile page'
+          />
+        }
+        githubLink='https://github.com/allennguyen01/jukeboxd'
+        previewLink='https://jukeboxd-azure.vercel.app/'
+        summary='Letterboxd-inspired web app that allows users to discover and rate music, featuring a sleek interface and powerful search capabilities, built with a modern tech stack for optimal performance.'
+        techStack={jukeboxdTechStack}
+        datesWorked={'Jan 2025 - Present'}
+      />
+
+      <Project
         title={'PeakFit'}
         logo={PeakFitLogo}
         projectType={'personal health mobile app startup'}
@@ -333,12 +367,12 @@ function Project({
             <Image
               src={logo}
               alt={`${title} logo`}
-              className='w-10 rounded-lg lg:w-20'
+              className='w-10 lg:w-20'
             />
 
             <div>
               <h3>{title}</h3>
-              <p className='text-base lg:text-xl'>{projectType}</p>
+              <p className='text-base lg:text-lg'>{projectType}</p>
             </div>
           </div>
 
@@ -349,10 +383,8 @@ function Project({
         </div>
 
         <div className='flex flex-col-reverse gap-8 bg-base-200 p-6 lg:flex-row'>
-          <section className='flex flex-col gap-8'>
-            <div className='text-base leading-relaxed lg:text-lg'>
-              {summary}
-            </div>
+          <section className='flex flex-col gap-6'>
+            <div className='text-base leading-relaxed'>{summary}</div>
 
             <div className='flex flex-wrap items-center gap-2'>
               <span className='text-sm font-semibold lg:text-base'>
@@ -370,8 +402,8 @@ function Project({
             </div>
 
             <div className='text-sm lg:text-base'>
-              <span className='font-bold'>Date: </span>
-              <span className=''>{datesWorked}</span>
+              <span className='font-semibold'>Date: </span>
+              <span>{datesWorked}</span>
             </div>
           </section>
 
