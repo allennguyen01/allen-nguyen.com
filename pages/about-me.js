@@ -8,15 +8,20 @@ export default function AboutMe() {
       id='about-me'
       className='m-8 mt-24 flex min-h-screen flex-col items-center justify-center gap-8 text-center text-base lg:mt-32 lg:text-lg'
     >
-      <h1>hey, I&apos;m Allen 👋</h1>
+      <h1 className='text-slate-50'>hey, I&apos;m Allen 👋</h1>
       <p className='lg:text-xl'>
-        currently: full-stack software developer @{' '}
+        <span className='text-slate-50'>currently:</span> finishing last
+        semester @ UBC, graduating in December 2025
+        <br />
+        <span className='text-slate-50'>my project highlight:</span>{' '}
         <a
-          href='https://www.ontraccr.com/'
+          href='https://jukeboxd-azure.vercel.app/'
+          target='_blank'
           className='link link-primary'
         >
-          Ontraccr Technologies
+          Jukeboxd
         </a>
+        , Letterboxd for music lovers
         <br />
         <br />
         🎒 computer engineering @ ubc
