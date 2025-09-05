@@ -25,48 +25,48 @@ import slientOwlLogo from '../public/images/projects/silent-owl/silent-owl-logo.
 
 const techBadges = {
   'React.js':
-    'https://img.shields.io/badge/react-%2320232a?style=for-the-badge&logo=react&logoColor=%2361DAFB',
+    'https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB',
   JavaScript:
-    'https://img.shields.io/badge/javascript-%23323330?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E',
-  HTML: 'https://img.shields.io/badge/html5-%23E34F26?style=for-the-badge&logo=html5&logoColor=white',
-  CSS: 'https://img.shields.io/badge/css3-%231572B6?style=for-the-badge&logo=css3&logoColor=white',
+    'https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000',
+  HTML: 'https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white',
+  CSS: 'https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff',
   TailwindCSS:
-    'https://img.shields.io/badge/tailwindcss-%2338B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white',
+    'https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC.svg?logo=tailwind-css&logoColor=white',
   'Chakra UI':
-    'https://img.shields.io/badge/chakra-%234ED1C5?style=for-the-badge&logo=chakraui&logoColor=white',
+    'https://img.shields.io/badge/Chakra%20UI-%234ED1C5.svg?logo=chakraui&logoColor=white',
   Netlify:
-    'https://img.shields.io/badge/netlify-%23000000?style=for-the-badge&logo=netlify&logoColor=#00C7B7',
+    'https://img.shields.io/badge/Netlify-%23000000.svg?logo=netlify&logoColor=#00C7B7',
   'React Native':
-    'https://img.shields.io/badge/react_native-%2320232a?style=for-the-badge&logo=react&logoColor=%2361DAFB',
-  Figma:
-    'https://img.shields.io/badge/figma-%23F24E1E?style=for-the-badge&logo=figma&logoColor=white',
-  Expo: 'https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37',
+    'https://img.shields.io/badge/React_Native-%2320232a.svg?logo=react&logoColor=%2361DAFB',
+  Figma: 'https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white',
+  Expo: 'https://img.shields.io/badge/Expo-000020?logo=expo&logoColor=fff',
   Python:
-    'https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54',
+    'https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff',
   PyTorch:
-    'https://img.shields.io/badge/PyTorch-%23EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white',
+    'https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white',
   'Google Colab':
-    'https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=google%20colab&logoColor=white',
+    'https://img.shields.io/badge/Google_Colab-F9AB00?logo=google%20colab&logoColor=white',
   Pandas:
-    'https://img.shields.io/badge/pandas-%23150458?style=for-the-badge&logo=pandas&logoColor=white',
-  NumPy:
-    'https://img.shields.io/badge/numpy-%23013243?style=for-the-badge&logo=numpy&logoColor=white',
+    'https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white',
+  NumPy: 'https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white',
   'Node.js':
-    'https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white',
+    'https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white',
   MongoDB:
-    'https://img.shields.io/badge/MongoDB-%234ea94b?style=for-the-badge&logo=mongodb&logoColor=white',
+    'https://img.shields.io/badge/MongoDB-%234ea94b?logo=mongodb&logoColor=white',
   'Express.js':
-    'https://img.shields.io/badge/express.js-%23404d59?style=for-the-badge&logo=express&logoColor=%2361DAFB',
-  Java: 'https://img.shields.io/badge/java-%23ED8B00?style=for-the-badge&logo=openjdk&logoColor=white',
+    'https://img.shields.io/badge/Express.js-%23404d59?logo=express&logoColor=%2361DAFB',
+  Java: 'https://img.shields.io/badge/Java-%23ED8B00?logo=openjdk&logoColor=white',
   TypeScript:
-    'https://img.shields.io/badge/typescript-%23007ACC?style=for-the-badge&logo=typescript&logoColor=white',
+    'https://img.shields.io/badge/TypeScript-%23007ACC?logo=typescript&logoColor=white',
   ChatGPT:
-    'https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white',
+    'https://img.shields.io/badge/ChatGPT-74aa9c?logo=openai&logoColor=white',
   ShadcnUI:
     'https://img.shields.io/badge/shadcn%2Fui-000?logo=shadcnui&logoColor=fff',
   Supabase:
     'https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=fff',
   Vite: 'https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff',
+  Spotify:
+    'https://img.shields.io/badge/Spotify-1ED760?logo=spotify&logoColor=white',
 };
 
 export default function Projects() {
@@ -77,6 +77,7 @@ export default function Projects() {
     'ShadcnUI',
     'Supabase',
     'Vite',
+    'Spotify',
   ];
 
   const peakFitTechStack = [
