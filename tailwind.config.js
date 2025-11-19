@@ -13,7 +13,7 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        barlow: ['barlow', 'sans-serif'],
+        barlow: ['var(--font-barlow)', 'sans-serif'],
       },
       colors: {
         white: '#e4e6eb',

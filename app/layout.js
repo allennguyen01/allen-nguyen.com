@@ -1,11 +1,12 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Inter, Barlow } from 'next/font/google';
 import Link from 'next/link';
 import Image from 'next/image';
 
 import miiHeadshot from './icon.png';
 
 const inter = Inter({ subsets: ['latin'] });
+const barlow = Barlow({ subsets: ['latin'], weight: ['700'], variable: '--font-barlow' });
 
 export const metadata = {
   title: 'Allen Nguyen',
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang='en'
-      className='scroll-smooth'
+      className={`${barlow.variable} scroll-smooth`}
     >
       <body className={`${inter.className} flex min-h-screen flex-col`}>
         <NavBar />
