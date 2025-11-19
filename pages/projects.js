@@ -160,7 +160,7 @@ export default function Projects() {
               key={img.alt}
               src={img.src}
               alt={img.alt}
-              className='w-1/3 rounded-sm'
+              className='w-1/3 rounded-xs'
             />
           );
         })}
@@ -192,7 +192,7 @@ export default function Projects() {
               key={img.alt}
               src={img.src}
               alt={img.alt}
-              className='w-1/3 rounded-sm'
+              className='w-1/3 rounded-xs'
             />
           );
         })}
@@ -222,7 +222,7 @@ export default function Projects() {
               key={img.alt}
               src={img.src}
               alt={img.alt}
-              className={`rounded-sm ${img.width}`}
+              className={`rounded-xs ${img.width}`}
             />
           );
         })}
@@ -363,7 +363,7 @@ function Project({
   return (
     <>
       <div className='items-center justify-center lg:max-w-4xl'>
-        <div className='flex items-center justify-between rounded bg-slate-300 p-4'>
+        <div className='flex items-center justify-between rounded-sm bg-slate-300 p-4'>
           <div className='flex max-w-[250px] items-center gap-2 lg:max-w-none lg:gap-4'>
             <Image
               src={logo}
@@ -396,7 +396,7 @@ function Project({
                   <img
                     src={techBadges[t]}
                     alt={`${t} logo`}
-                    className='rounded object-contain'
+                    className='rounded-sm object-contain'
                   />
                 </picture>
               ))}

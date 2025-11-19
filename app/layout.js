@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
 
 function NavBar() {
   return (
-    <nav className='fixed top-0 z-50 flex w-full items-center justify-center self-center bg-slate-800 bg-opacity-20 font-medium drop-shadow-sm backdrop-blur px-6 py-4 lg:px-40 lg:py-4'>
+    <nav className='fixed top-0 z-50 flex w-full items-center justify-center self-center bg-slate-300 bg-opacity-20 font-medium drop-shadow-xs backdrop-blur-sm px-6 py-4 lg:px-40 lg:py-4'>
       <div className='flex flex-1 items-center'>
         <Link
           href='/'
@@ -76,7 +76,7 @@ function NavBar() {
           </div>
           <ul
             tabIndex={0}
-            className='absolute right-0 z-[1] mt-3 hidden w-52 rounded-lg bg-slate-200 p-2 shadow-lg group-hover:block'
+            className='absolute right-0 z-1 mt-3 hidden w-52 rounded-lg bg-slate-200 p-2 shadow-lg group-hover:block'
           >
             <Link
               href='#experience'
