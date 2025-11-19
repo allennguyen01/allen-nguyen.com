@@ -14,22 +14,22 @@ export default function ContactIcons() {
   const contacts = [
     {
       name: 'linkedIn',
-      icon: <RiLinkedinFill className='h-12 w-12 lg:h-16 lg:w-16' />,
+      icon: <RiLinkedinFill className='h-12 w-12 lg:h-20 lg:w-20' />,
       link: 'https://www.linkedin.com/in/allendnguyen/',
     },
     {
       name: 'github',
-      icon: <RiGithubFill className='h-12 w-12 lg:h-16 lg:w-16' />,
+      icon: <RiGithubFill className='h-12 w-12 lg:h-20 lg:w-20' />,
       link: 'https://github.com/allennguyen01/',
     },
     {
       name: 'resume',
-      icon: <RiFilePaper2Fill className='h-12 w-12 lg:h-16 lg:w-16' />,
+      icon: <RiFilePaper2Fill className='h-12 w-12 lg:h-20 lg:w-20' />,
       link: './resume.pdf',
     },
     {
       name: 'email',
-      icon: <RiMailFill className='h-12 w-12 lg:h-16 lg:w-16' />,
+      icon: <RiMailFill className='h-12 w-12 lg:h-20 lg:w-20' />,
       link: 'mailto:allennguyen415@gmail.com',
     },
   ];
