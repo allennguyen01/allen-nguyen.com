@@ -34,13 +34,13 @@ export default function RootLayout({ children }) {
 
 function NavBar() {
   return (
-    <div className='navbar fixed top-0 z-50 flex w-full items-center justify-center self-center bg-base-300 bg-opacity-20 font-medium drop-shadow-sm backdrop-blur lg:px-40 lg:py-4'>
-      <div className='navbar-start'>
+    <nav className='fixed top-0 z-50 flex w-full items-center justify-center self-center bg-slate-800 bg-opacity-20 font-medium drop-shadow-sm backdrop-blur px-6 py-4 lg:px-40 lg:py-4'>
+      <div className='flex flex-1 items-center'>
         <Link
           href='/'
           className='flex items-center gap-2'
         >
-          <button className='btn btn-circle btn-primary h-16 w-16'>
+          <button className='flex h-16 w-16 items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 transition-colors'>
             <Image
               src={miiHeadshot}
               alt='Allen as a Mii'
@@ -49,15 +49,15 @@ function NavBar() {
           </button>
         </Link>
       </div>
-      <div className='navbar-end gap-4'>
+      <div className='flex flex-1 items-center justify-end gap-4'>
         <div className='lg:hidden'>
           <ThemeSwap />
         </div>
-        <div className='dropdown dropdown-end'>
+        <div className='group relative lg:hidden'>
           <div
             tabIndex={0}
             role='button'
-            className='btn btn-ghost lg:hidden'
+            className='flex items-center justify-center rounded-lg p-2 hover:bg-slate-300 transition-colors'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -76,23 +76,23 @@ function NavBar() {
           </div>
           <ul
             tabIndex={0}
-            className='menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow'
+            className='absolute right-0 z-[1] mt-3 hidden w-52 rounded-lg bg-slate-200 p-2 shadow-lg group-hover:block'
           >
             <Link
               href='#experience'
-              className='rounded-lg px-4 py-2 hover:bg-black'
+              className='block rounded-lg px-4 py-2 hover:bg-slate-400 transition-colors'
             >
               experience
             </Link>
             <Link
               href='#projects'
-              className='rounded-lg px-4 py-2 hover:bg-black'
+              className='block rounded-lg px-4 py-2 hover:bg-slate-400 transition-colors'
             >
               projects
             </Link>
             <Link
               href='./resume.pdf'
-              className='hover:bg-accent-focus rounded-lg bg-accent px-4 py-2 text-black'
+              className='block rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 transition-colors'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -101,25 +101,25 @@ function NavBar() {
           </ul>
         </div>
       </div>
-      <div className='navbar-end hidden w-full lg:flex'>
-        <ul className='menu menu-horizontal gap-4 px-1 text-base'>
+      <div className='hidden w-full flex-1 items-center justify-end lg:flex'>
+        <ul className='flex items-center gap-4 px-1 text-base'>
           <ThemeSwap />
 
           <Link
             href='#experiences'
-            className='rounded-lg px-4 py-2 hover:bg-black'
+            className='rounded-lg px-4 py-2 hover:bg-slate-400 transition-colors'
           >
             experience
           </Link>
           <Link
             href='#projects'
-            className='rounded-lg px-4 py-2 hover:bg-black'
+            className='rounded-lg px-4 py-2 hover:bg-slate-400 transition-colors'
           >
             projects
           </Link>
           <Link
             href='./resume.pdf'
-            className='hover:bg-accent-focus rounded-lg bg-accent px-4 py-2 text-black'
+            className='rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 transition-colors'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -127,15 +127,16 @@ function NavBar() {
           </Link>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 }
 
+// TODO: implement theme swap
 function ThemeSwap() {
   function MoonIcon() {
     return (
       <svg
-        className='swap-off h-6 w-6 fill-current lg:h-8 lg:w-8'
+        className='h-6 w-6 fill-current lg:h-8 lg:w-8'
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
       >
@@ -147,7 +148,7 @@ function ThemeSwap() {
   function SunIcon() {
     return (
       <svg
-        className='swap-on h-6 w-6 fill-current lg:h-8 lg:w-8'
+        className='h-6 w-6 fill-current lg:h-8 lg:w-8'
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
       >
@@ -157,15 +158,21 @@ function ThemeSwap() {
   }
 
   return (
-    <label className='swap swap-rotate'>
+    <label className='relative inline-flex cursor-pointer items-center'>
       {/* this hidden checkbox controls the state */}
       <input
         type='checkbox'
-        className='theme-controller'
+        className='peer sr-only'
         value='autumn'
       />
-      <MoonIcon />
-      <SunIcon />
+      <div className='relative h-6 w-6 lg:h-8 lg:w-8'>
+        <div className='peer-checked:opacity-0 peer-checked:pointer-events-none absolute inset-0 transition-opacity'>
+          <MoonIcon />
+        </div>
+        <div className='opacity-0 pointer-events-none peer-checked:opacity-100 peer-checked:pointer-events-auto absolute inset-0 transition-opacity'>
+          <SunIcon />
+        </div>
+      </div>
     </label>
   );
 }

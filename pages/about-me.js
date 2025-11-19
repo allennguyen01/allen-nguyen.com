@@ -6,18 +6,18 @@ export default function AboutMe() {
   return (
     <main
       id='about-me'
-      className='m-8 mt-24 flex min-h-screen flex-col items-center justify-center gap-8 text-center text-base lg:mt-32 lg:text-lg'
+      className='m-8 mt-32 flex min-h-screen flex-col items-center justify-center gap-8 text-center text-base lg:text-lg'
     >
       <h1>hey, I&apos;m Allen 👋</h1>
       <p className='lg:text-xl'>
-        <span className='text-slate-50'>currently:</span> finishing last
+        <span className='font-semibold'>currently:</span> finishing last
         semester @ UBC, graduating in December 2025
         <br />
-        <span className='text-slate-50'>my project highlight:</span>{' '}
+        <span className='font-semibold'>my project highlight:</span>{' '}
         <a
           href='https://jukeboxd-azure.vercel.app/'
           target='_blank'
-          className='link link-primary'
+          className='text-blue-500 underline hover:text-blue-700 transition-colors'
         >
           Jukeboxd
         </a>
@@ -25,7 +25,7 @@ export default function AboutMe() {
         <a
           href='https://letterboxd.com/'
           target='_blank'
-          className='link'
+          className='text-blue-500 underline hover:text-blue-700 transition-colors'
         >
           Letterboxd
         </a>

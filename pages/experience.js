@@ -113,12 +113,12 @@ export default function Experience() {
     <main className='mx-8 mb-2 mt-24 flex flex-auto flex-col items-center gap-12 lg:mt-32'>
       <h1>experience 💻</h1>
 
-      <div className='flex flex-col gap-8 lg:flex-row'>
+      <div className='flex flex-col gap-8 lg:gap-16 lg:flex-row'>
         <div className='flex flex-col gap-4'>
           <h2 className='ml-6'>work internships</h2>
           <ul
             id='work-experience'
-            className='timeline timeline-vertical timeline-compact timeline-snap-icon'
+            className='border-l-2 border-slate-700'
           >
             {workExperience.map((item, index) => (
               <TimelineItem
@@ -133,7 +133,7 @@ export default function Experience() {
           <h2 className='ml-6'>extracurriculars</h2>
           <ul
             id='extracurriculars'
-            className='timeline timeline-vertical timeline-compact timeline-snap-icon'
+            className='border-l-2 border-slate-700'
           >
             {extracurriculars.map((item, index) => (
               <TimelineItem
@@ -150,33 +150,30 @@ export default function Experience() {
 
 function TimelineItem({ position, company, time, description, logo, link }) {
   return (
-    <li>
-      <div className='timeline-middle'>
-        <div className='flex h-12 w-12 items-center justify-center rounded-full border-0 bg-white p-0 transition-colors duration-200 ease-in-out hover:cursor-pointer hover:bg-base-300 lg:h-16 lg:w-16'>
-          <a
-            href={link}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <Image
-              src={logo}
-              className='h-10 w-10 rounded-full lg:h-14 lg:w-14'
-              alt={`${company} logo`}
-            />
-          </a>
-        </div>
+    <li className='relative pl-8 lg:mb-10'>
+      <div className='absolute -left-[25px] top-0 flex h-12 w-12 items-center justify-center rounded-full border-4 border-slate-700 bg-white transition-colors duration-200 ease-in-out hover:cursor-pointer hover:bg-slate-200 lg:-left-[32px] lg:h-16 lg:w-16'>
+        <a
+          href={link}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Image
+            src={logo}
+            className='h-10 w-10 rounded-full lg:h-14 lg:w-14'
+            alt={`${company} logo`}
+          />
+        </a>
       </div>
-      <div className='timeline-start mb-10 flex w-full max-w-sm flex-1 flex-col gap-2 rounded-lg bg-base-200 p-2 lg:mx-2 lg:p-4'>
-        <h4 className='flex items-center text-base-content'>{position}</h4>
-        <h5 className='text-error'>{company}</h5>
-        <time className='block text-sm font-normal leading-none text-warning lg:text-base'>
+      <div className='mb-10 flex w-full max-w-sm flex-1 flex-col gap-2 rounded-lg bg-slate-200 p-2 lg:mx-2 lg:p-4'>
+        <h4 className='flex items-center'>{position}</h4>
+        <h5>{company}</h5>
+        <time className='block text-sm font-normal leading-none lg:text-base'>
           {time}
         </time>
-        <p className='text-sm font-normal leading-relaxed text-base-content lg:text-base'>
+        <p className='text-sm font-normal leading-relaxed lg:text-base'>
           {description}
         </p>
       </div>
-      <hr />
     </li>
   );
 }

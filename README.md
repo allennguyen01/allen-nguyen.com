@@ -17,7 +17,7 @@ Netlify deployment status: [![Netlify Status](https://api.netlify.com/api/v1/bad
 
 ## Tech Stack
 
-- Frontend: Next.jsS, TailwindCSS, daisyUI
+- Frontend: Next.js, TailwindCSS
 
 ## Getting Started
 
