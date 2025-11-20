@@ -7,7 +7,11 @@ import ThemeSwap from '@/components/ThemeSwap';
 import miiHeadshot from './icon.png';
 
 const inter = Inter({ subsets: ['latin'] });
-const barlow = Barlow({ subsets: ['latin'], weight: ['700'], variable: '--font-barlow' });
+const barlow = Barlow({
+  subsets: ['latin'],
+  weight: ['700'],
+  variable: '--font-barlow',
+});
 
 export const metadata = {
   title: 'Allen Nguyen',
@@ -21,7 +25,18 @@ export default function RootLayout({ children }) {
       lang='en'
       className={`${barlow.variable} dark scroll-smooth`}
     >
-      <body className={`${inter.className} flex min-h-screen flex-col bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100`}>
+      <head>
+        <link
+          rel='icon'
+          href='/icon.png'
+          type='image/png'
+          sizes='any'
+        />
+      </head>
+
+      <body
+        className={`${inter.className} flex min-h-screen flex-col bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100`}
+      >
         <NavBar />
         {children}
 
@@ -36,13 +51,13 @@ export default function RootLayout({ children }) {
 
 function NavBar() {
   return (
-    <nav className='fixed top-0 z-50 flex w-full items-center justify-center self-center bg-zinc-300/30 dark:bg-zinc-700/30 font-medium drop-shadow backdrop-blur px-6 py-4 lg:px-40 lg:py-4'>
+    <nav className='fixed top-0 z-50 flex w-full items-center justify-center self-center bg-zinc-300/30 px-6 py-4 font-medium drop-shadow backdrop-blur lg:px-40 lg:py-4 dark:bg-zinc-700/30'>
       <div className='flex flex-1 items-center'>
         <Link
           href='/'
           className='flex items-center gap-2'
         >
-          <button className='flex h-16 w-16 items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 transition-colors'>
+          <button className='flex h-16 w-16 items-center justify-center rounded-full bg-blue-600 transition-colors hover:bg-blue-700'>
             <Image
               src={miiHeadshot}
               alt='Allen as a Mii'
@@ -59,7 +74,7 @@ function NavBar() {
           <div
             tabIndex={0}
             role='button'
-            className='flex items-center justify-center rounded-lg p-2 hover:bg-zinc-700 dark:hover:bg-zinc-700 transition-colors'
+            className='flex items-center justify-center rounded-lg p-2 transition-colors hover:bg-zinc-700 dark:hover:bg-zinc-700'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -78,23 +93,23 @@ function NavBar() {
           </div>
           <ul
             tabIndex={0}
-            className='absolute right-0 z-1 mt-3 hidden w-52 rounded-lg bg-zinc-700 dark:bg-zinc-700 p-2 shadow-lg group-hover:block'
+            className='absolute right-0 z-1 mt-3 hidden w-52 rounded-lg bg-zinc-700 p-2 shadow-lg group-hover:block dark:bg-zinc-700'
           >
             <Link
               href='#experience'
-              className='block rounded-lg px-4 py-2 hover:bg-zinc-600 dark:hover:bg-zinc-600 transition-colors'
+              className='block rounded-lg px-4 py-2 transition-colors hover:bg-zinc-600 dark:hover:bg-zinc-600'
             >
               experience
             </Link>
             <Link
               href='#projects'
-              className='block rounded-lg px-4 py-2 hover:bg-zinc-600 dark:hover:bg-zinc-600 transition-colors'
+              className='block rounded-lg px-4 py-2 transition-colors hover:bg-zinc-600 dark:hover:bg-zinc-600'
             >
               projects
             </Link>
             <Link
               href='./resume.pdf'
-              className='block rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 transition-colors'
+              className='block rounded-lg bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -109,19 +124,19 @@ function NavBar() {
 
           <Link
             href='#experiences'
-            className='rounded-lg px-4 py-2 hover:bg-zinc-700 dark:hover:bg-zinc-700 transition-colors'
+            className='rounded-lg px-4 py-2 transition-colors hover:bg-zinc-700 dark:hover:bg-zinc-700'
           >
             experience
           </Link>
           <Link
             href='#projects'
-            className='rounded-lg px-4 py-2 hover:bg-zinc-700 dark:hover:bg-zinc-700 transition-colors'
+            className='rounded-lg px-4 py-2 transition-colors hover:bg-zinc-700 dark:hover:bg-zinc-700'
           >
             projects
           </Link>
           <Link
             href='./resume.pdf'
-            className='rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 transition-colors'
+            className='rounded-lg bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700'
             target='_blank'
             rel='noopener noreferrer'
           >
