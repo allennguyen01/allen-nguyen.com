@@ -6,15 +6,15 @@ export default function Home() {
   return (
     <div>
       <AboutMe />
-      <div
-        className='divider'
+      <hr
+        className='my-8 border-slate-700 dark:border-slate-600 border-b-2'
         id='experiences'
-      ></div>
+      />
       <Experience />
-      <div
-        className='divider'
+      <hr
+        className='my-8 border-slate-700 dark:border-slate-600 border-b-2'
         id='projects'
-      ></div>
+      />
       <Projects />
     </div>
   );

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -13,7 +14,7 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        barlow: ['barlow', 'sans-serif'],
+        barlow: ['var(--font-barlow)', 'sans-serif'],
       },
       colors: {
         white: '#e4e6eb',
@@ -25,9 +26,5 @@ module.exports = {
       addVariant('child', '& > *');
       addVariant('child-hover', '& > *:hover');
     },
-    require('daisyui'),
   ],
-  daisyui: {
-    themes: ['sunset', 'autumn'],
-  },
 };

@@ -10,6 +10,7 @@ import PeakFitNutrition from '../public/images/projects/peakfit/nutrition.png';
 import PeakFitYou from '../public/images/projects/peakfit/you.png';
 
 import UCalgaryCSSDesktop from '../public/images/projects/ucalgary-css/css-desktop-homepage.jpg';
+import UCalgaryCSSMobile from '../public/images/projects/ucalgary-css/css-phone-homepage.jpg';
 import UCalgaryCSSlogo from '../public/images/projects/ucalgary-css/ucalgarycss-logo.png';
 
 import cgClosetScreen from '../public/images/projects/closetgenie/closet-screen.png';
@@ -160,7 +161,7 @@ export default function Projects() {
               key={img.alt}
               src={img.src}
               alt={img.alt}
-              className='w-1/3 rounded-sm'
+              className='w-1/3 rounded-xs'
             />
           );
         })}
@@ -192,7 +193,7 @@ export default function Projects() {
               key={img.alt}
               src={img.src}
               alt={img.alt}
-              className='w-1/3 rounded-sm'
+              className='w-1/3 rounded-xs'
             />
           );
         })}
@@ -222,7 +223,7 @@ export default function Projects() {
               key={img.alt}
               src={img.src}
               alt={img.alt}
-              className={`rounded-sm ${img.width}`}
+              className={`rounded-xs ${img.width}`}
             />
           );
         })}
@@ -363,7 +364,7 @@ function Project({
   return (
     <>
       <div className='items-center justify-center lg:max-w-4xl'>
-        <div className='flex items-center justify-between rounded bg-base-300 p-4'>
+        <div className='flex items-center justify-between rounded-sm bg-zinc-300 p-4 dark:bg-zinc-700'>
           <div className='flex max-w-[250px] items-center gap-2 lg:max-w-none lg:gap-4'>
             <Image
               src={logo}
@@ -383,7 +384,7 @@ function Project({
           />
         </div>
 
-        <div className='flex flex-col-reverse gap-8 bg-base-200 p-6 lg:flex-row'>
+        <div className='flex flex-col-reverse gap-8 bg-zinc-200 p-6 lg:flex-row dark:bg-zinc-800'>
           <section className='flex flex-col gap-6'>
             <div className='text-base leading-relaxed'>{summary}</div>
 
@@ -396,7 +397,7 @@ function Project({
                   <img
                     src={techBadges[t]}
                     alt={`${t} logo`}
-                    className='rounded object-contain'
+                    className='rounded-sm object-contain'
                   />
                 </picture>
               ))}
@@ -412,8 +413,6 @@ function Project({
             {previewImages}
           </section>
         </div>
-
-        <div className='divider my-4'></div>
       </div>
     </>
   );
@@ -423,19 +422,21 @@ function ProjectButtons({ previewLink, githubLink }) {
   return (
     <section className='flex flex-col justify-evenly gap-1 lg:flex-row lg:gap-4'>
       {previewLink ? (
-        <button className='btn btn-circle btn-primary btn-sm lg:btn-lg'>
-          <a href={previewLink}>
-            <RiComputerLine className='h-6 w-6 lg:h-8 lg:w-8' />
-          </a>
-        </button>
+        <a
+          href={previewLink}
+          className='flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 transition-colors hover:bg-blue-700 lg:h-12 lg:w-12'
+        >
+          <RiComputerLine className='h-6 w-6 lg:h-8 lg:w-8' />
+        </a>
       ) : (
         <></>
       )}
-      <button className='btn btn-circle btn-secondary btn-sm lg:btn-lg'>
-        <a href={githubLink}>
-          <RiGithubLine className='h-6 w-6 lg:h-8 lg:w-8' />
-        </a>
-      </button>
+      <a
+        href={githubLink}
+        className='flex h-10 w-10 items-center justify-center rounded-full bg-red-600 transition-colors hover:bg-red-700 lg:h-12 lg:w-12'
+      >
+        <RiGithubLine className='h-6 w-6 lg:h-8 lg:w-8' />
+      </a>
     </section>
   );
 }
