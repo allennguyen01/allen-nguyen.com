@@ -110,15 +110,15 @@ const extracurriculars = [
 
 export default function Experience() {
   return (
-    <main className='mx-8 mb-2 mt-24 flex flex-auto flex-col items-center gap-12 lg:mt-32'>
+    <main className='mx-8 mt-24 mb-2 flex flex-auto flex-col items-center gap-12 lg:mt-32'>
       <h1>experience 💻</h1>
 
-      <div className='flex flex-col gap-8 lg:gap-16 lg:flex-row'>
+      <div className='flex flex-col gap-8 lg:flex-row lg:gap-16'>
         <div className='flex flex-col gap-4'>
           <h2 className='ml-6'>work internships</h2>
           <ul
             id='work-experience'
-            className='border-l-2 border-slate-700'
+            className='border-l-2 border-zinc-400 dark:border-zinc-600'
           >
             {workExperience.map((item, index) => (
               <TimelineItem
@@ -133,7 +133,7 @@ export default function Experience() {
           <h2 className='ml-6'>extracurriculars</h2>
           <ul
             id='extracurriculars'
-            className='border-l-2 border-slate-700'
+            className='border-l-2 border-zinc-400 dark:border-zinc-600'
           >
             {extracurriculars.map((item, index) => (
               <TimelineItem
@@ -151,7 +151,7 @@ export default function Experience() {
 function TimelineItem({ position, company, time, description, logo, link }) {
   return (
     <li className='relative pl-8 lg:mb-10'>
-      <div className='absolute -left-[25px] top-0 flex h-12 w-12 items-center justify-center rounded-full border-4 border-slate-700 bg-white transition-colors duration-200 ease-in-out hover:cursor-pointer hover:bg-slate-200 lg:-left-[32px] lg:h-16 lg:w-16'>
+      <div className='absolute top-0 -left-[25px] flex size-12 items-center justify-center rounded-full border-4 bg-zinc-100 transition-colors duration-200 ease-in-out hover:cursor-pointer hover:bg-zinc-700 lg:-left-[32px] lg:size-16 dark:border-zinc-600 dark:bg-zinc-800 dark:hover:bg-zinc-700'>
         <a
           href={link}
           target='_blank'
@@ -164,13 +164,13 @@ function TimelineItem({ position, company, time, description, logo, link }) {
           />
         </a>
       </div>
-      <div className='mb-10 flex w-full max-w-sm flex-1 flex-col gap-2 rounded-lg bg-slate-200 p-2 lg:mx-2 lg:p-4'>
+      <div className='mb-10 flex w-full max-w-sm flex-1 flex-col gap-2 rounded-lg bg-zinc-200 p-2 lg:mx-2 lg:p-4 dark:bg-zinc-800'>
         <h4 className='flex items-center'>{position}</h4>
         <h5>{company}</h5>
-        <time className='block text-sm font-normal leading-none lg:text-base'>
+        <time className='block text-sm leading-none font-normal lg:text-base'>
           {time}
         </time>
-        <p className='text-sm font-normal leading-relaxed lg:text-base'>
+        <p className='text-sm leading-relaxed font-normal lg:text-base'>
           {description}
         </p>
       </div>

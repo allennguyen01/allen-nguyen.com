@@ -10,32 +10,33 @@ import {
 
 export default function ContactIcons() {
   const iconSize = 50;
+  const iconStyle = 'size-12 lg:size-20';
 
   const contacts = [
     {
       name: 'linkedIn',
-      icon: <RiLinkedinFill className='h-12 w-12 lg:h-20 lg:w-20' />,
+      icon: <RiLinkedinFill className={iconStyle} />,
       link: 'https://www.linkedin.com/in/allendnguyen/',
     },
     {
       name: 'github',
-      icon: <RiGithubFill className='h-12 w-12 lg:h-20 lg:w-20' />,
+      icon: <RiGithubFill className={iconStyle} />,
       link: 'https://github.com/allennguyen01/',
     },
     {
       name: 'resume',
-      icon: <RiFilePaper2Fill className='h-12 w-12 lg:h-20 lg:w-20' />,
+      icon: <RiFilePaper2Fill className={iconStyle} />,
       link: './resume.pdf',
     },
     {
       name: 'email',
-      icon: <RiMailFill className='h-12 w-12 lg:h-20 lg:w-20' />,
+      icon: <RiMailFill className={iconStyle} />,
       link: 'mailto:allennguyen415@gmail.com',
     },
   ];
 
   return (
-    <div className='flex gap-8'>
+    <div className='flex gap-8 lg:gap-12'>
       {contacts.map((contact) => (
         <div
           key={contact.name}

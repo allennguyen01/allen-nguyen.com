@@ -7,12 +7,12 @@ export default function Home() {
     <div>
       <AboutMe />
       <hr
-        className='my-8 border-slate-700'
+        className='my-8 border-slate-700 dark:border-slate-600 border-b-2'
         id='experiences'
       />
       <Experience />
       <hr
-        className='my-8 border-slate-700'
+        className='my-8 border-slate-700 dark:border-slate-600 border-b-2'
         id='projects'
       />
       <Projects />

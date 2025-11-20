@@ -14,21 +14,21 @@ export default function AboutMe() {
         semester @ UBC, graduating in December 2025
         <br />
         <span className='font-semibold'>my project highlight:</span>{' '}
-        <a
-          href='https://jukeboxd-azure.vercel.app/'
-          target='_blank'
-          className='text-blue-500 underline hover:text-blue-700 transition-colors'
-        >
-          Jukeboxd
-        </a>
-        ,{' '}
-        <a
-          href='https://letterboxd.com/'
-          target='_blank'
-          className='text-blue-500 underline hover:text-blue-700 transition-colors'
-        >
-          Letterboxd
-        </a>
+          <a
+            href='https://jukeboxd-azure.vercel.app/'
+            target='_blank'
+            className='text-blue-400 underline hover:text-blue-300 transition-colors'
+          >
+            Jukeboxd
+          </a>
+          ,{' '}
+          <a
+            href='https://letterboxd.com/'
+            target='_blank'
+            className='text-blue-400 underline hover:text-blue-300 transition-colors'
+          >
+            Letterboxd
+          </a>
         -clone for music lovers
         <br />
         <br />

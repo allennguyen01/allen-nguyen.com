@@ -79,7 +79,7 @@ export default function SkillIcons() {
   ];
 
   return (
-    <section className='flex flex-col gap-4'>
+    <section className='flex flex-col gap-4 lg:gap-8'>
       <SkillType
         type='languages & databases'
         skills={languagesAndDatabases}
@@ -100,7 +100,7 @@ function SkillType({ type, skills }) {
   const gridVariants = {
     'languages & databases': 'grid-cols-3 lg:grid-cols-6',
     'frameworks & libraries': 'grid-cols-3 lg:grid-cols-6',
-    'tools': 'grid-cols-3 lg:grid-cols-6',
+    tools: 'grid-cols-3 lg:grid-cols-6',
   };
 
   return (
@@ -109,7 +109,7 @@ function SkillType({ type, skills }) {
       className='flex flex-col items-center gap-2'
     >
       <p className='text-lg'>{type}</p>
-      <div className={`grid ${gridVariants[type]} gap-4 text-center`}>
+      <div className={`grid ${gridVariants[type]} gap-4 text-center lg:gap-6`}>
         {skills.map((s) => (
           <motion.div
             key={s.name}
@@ -119,7 +119,7 @@ function SkillType({ type, skills }) {
             <Image
               src={s.image}
               alt={`${s.name} logo`}
-              className='h-14 w-14 rounded-xl bg-white object-contain p-1 lg:h-20 lg:w-20'
+              className='size-14 rounded-xl bg-zinc-200 object-contain p-1 lg:size-20 dark:bg-zinc-700'
             />
             <p className='text-xs lg:text-sm'>{s.name}</p>
           </motion.div>
