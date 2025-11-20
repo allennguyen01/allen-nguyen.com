@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
       </head>
 
       <body
-        className={`${inter.className} flex min-h-screen flex-col bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100`}
+        className={`${inter.className} flex min-h-screen flex-col bg-zinc-100 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-200`}
       >
         <NavBar />
         {children}
@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
 
 function NavBar() {
   return (
-    <nav className='fixed top-0 z-50 flex w-full items-center justify-center self-center bg-zinc-300/30 px-6 py-4 font-medium drop-shadow backdrop-blur lg:px-40 lg:py-4 dark:bg-zinc-700/30'>
+    <nav className='fixed top-0 z-50 flex w-full items-center justify-center self-center bg-zinc-300/30 px-6 py-4 font-medium drop-shadow backdrop-blur lg:px-40 lg:py-4 dark:bg-zinc-800/30'>
       <div className='flex flex-1 items-center'>
         <Link
           href='/'
