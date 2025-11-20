@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import { twMerge } from 'tailwind-merge';
 
-import OntraccrLogo from '@/public/images/experience/ontraccr-logo.jpg';
+import OntraccrLogo from '@/public/images/experience/ontraccr-logo.png';
 import InvertedAILogo from '@/public/images/experience/invertedai-logo.png';
 import VoronoiLogo from '@/public/images/experience/voronoi-logo.png';
 import BCILogo from '@/public/images/experience/bci-logo.svg';
@@ -151,7 +151,14 @@ export default function Experience() {
 function TimelineItem({ position, company, time, description, logo, link }) {
   return (
     <li className='relative pl-8 lg:mb-10'>
-      <div className='absolute top-0 -left-[25px] flex size-12 items-center justify-center rounded-full border-4 bg-zinc-100 transition-colors duration-200 ease-in-out hover:cursor-pointer hover:bg-zinc-700 lg:-left-[32px] lg:size-16 dark:border-zinc-600 dark:bg-zinc-800 dark:hover:bg-zinc-700'>
+      <div
+        className={twMerge(
+          'absolute flex size-12 items-center justify-center rounded-full p-1.5 hover:cursor-pointer lg:size-18',
+          'top-0 -left-[25px] lg:-left-[36px]',
+          'bg-zinc-200 hover:bg-zinc-700 dark:bg-zinc-200 dark:hover:bg-zinc-700',
+          'transition-colors duration-200 ease-in-out',
+        )}
+      >
         <a
           href={link}
           target='_blank'
@@ -159,7 +166,7 @@ function TimelineItem({ position, company, time, description, logo, link }) {
         >
           <Image
             src={logo}
-            className='h-10 w-10 rounded-full lg:h-14 lg:w-14'
+            className='object-contain'
             alt={`${company} logo`}
           />
         </a>
