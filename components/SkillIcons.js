@@ -97,19 +97,17 @@ export default function SkillIcons() {
 }
 
 function SkillType({ type, skills }) {
-  const gridVariants = {
-    'languages & databases': 'grid-cols-3 lg:grid-cols-6',
-    'frameworks & libraries': 'grid-cols-3 lg:grid-cols-6',
-    tools: 'grid-cols-3 lg:grid-cols-6',
-  };
-
   return (
     <div
       key={type}
       className='flex flex-col items-center gap-2'
     >
       <p className='text-lg'>{type}</p>
-      <div className={`grid ${gridVariants[type]} gap-4 text-center lg:gap-6`}>
+      <div
+        className={
+          'grid grid-cols-4 gap-x-1 gap-y-3 text-center lg:grid-cols-6 lg:gap-6'
+        }
+      >
         {skills.map((s) => (
           <motion.div
             key={s.name}
