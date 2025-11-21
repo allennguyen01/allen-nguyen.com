@@ -3,6 +3,7 @@ import { Inter, Barlow } from 'next/font/google';
 import Link from 'next/link';
 import Image from 'next/image';
 import ThemeSwap from '@/components/ThemeSwap';
+import { RiMenuFill } from 'react-icons/ri';
 
 import miiHeadshot from './icon.png';
 
@@ -66,7 +67,8 @@ function NavBar() {
           </button>
         </Link>
       </div>
-      <div className='flex flex-1 items-center justify-end gap-4'>
+      {/* mobile nav bar */}
+      <div className='flex flex-1 items-center justify-end gap-8'>
         <div className='lg:hidden'>
           <ThemeSwap />
         </div>
@@ -76,20 +78,7 @@ function NavBar() {
             role='button'
             className='flex items-center justify-center rounded-lg p-2 transition-colors hover:bg-zinc-700 dark:hover:bg-zinc-700'
           >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              className='h-5 w-5'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth='2'
-                d='M4 6h16M4 12h8m-8 6h16'
-              />
-            </svg>
+            <RiMenuFill className='size-8' />
           </div>
           <ul
             tabIndex={0}
@@ -118,9 +107,10 @@ function NavBar() {
           </ul>
         </div>
       </div>
+      {/* desktop nav bar */}
       <div className='hidden w-full flex-1 items-center justify-end lg:flex'>
         <ul className='flex items-center gap-4 px-1 text-base'>
-          <ThemeSwap />
+          <ThemeSwap className='lg:pr-8' />
 
           <Link
             href='#experiences'
