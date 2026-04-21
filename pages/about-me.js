@@ -10,26 +10,25 @@ export default function AboutMe() {
     >
       <h1>hey, I&apos;m Allen 👋</h1>
       <p className='lg:text-xl'>
-        <span className='font-semibold'>currently:</span> finishing last
-        semester @ UBC, graduating in December 2025
+        <span className='font-semibold'>currently:</span> junior software
+        engineer @{' '}
+        <a
+          href='https://www.ontraccr.com/'
+          target='_blank'
+          className='text-blue-500 underline transition-colors hover:text-blue-700'
+        >
+          Ontraccr Technologies
+        </a>
         <br />
         <span className='font-semibold'>my project highlight:</span>{' '}
-          <a
-            href='https://jukeboxd-azure.vercel.app/'
-            target='_blank'
-            className='text-blue-400 underline hover:text-blue-300 transition-colors'
-          >
-            Jukeboxd
-          </a>
-          ,{' '}
-          <a
-            href='https://letterboxd.com/'
-            target='_blank'
-            className='text-blue-400 underline hover:text-blue-300 transition-colors'
-          >
-            Letterboxd
-          </a>
-        -clone for music lovers
+        <a
+          href='https://jukeboxd-azure.vercel.app/'
+          target='_blank'
+          className='text-blue-500 underline transition-colors hover:text-blue-700'
+        >
+          Jukeboxd
+        </a>
+        , album rating platform for music lovers
         <br />
         <br />
         🎒 Computer Engineering @ UBC
@@ -38,7 +37,7 @@ export default function AboutMe() {
       </p>
 
       <Image
-        src='/images/me-casual.jpg'
+        src='/images/me-casual.JPG'
         alt='Photo of Allen'
         width={500}
         height={250}
