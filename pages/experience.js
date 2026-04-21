@@ -151,14 +151,7 @@ export default function Experience() {
 function TimelineItem({ position, company, time, description, logo, link }) {
   return (
     <li className='relative pl-8 lg:mb-10'>
-      <div
-        className={twMerge(
-          'absolute flex size-12 items-center justify-center rounded-full p-1.5 hover:cursor-pointer lg:size-18',
-          'top-0 -left-[25px] lg:-left-[36px]',
-          'bg-zinc-200 hover:bg-zinc-700 dark:bg-zinc-200 dark:hover:bg-zinc-700',
-          'transition-colors duration-200 ease-in-out',
-        )}
-      >
+      <div className='absolute top-0 -left-[25px] flex h-12 w-12 items-center justify-center rounded-full border-4 border-slate-700 bg-white transition-colors duration-200 ease-in-out hover:cursor-pointer hover:bg-slate-200 lg:-left-8 lg:h-16 lg:w-16'>
         <a
           href={link}
           target='_blank'

@@ -112,12 +112,12 @@ function SkillType({ type, skills }) {
           <motion.div
             key={s.name}
             whileHover={{ scale: 1.2 }}
-            className='flex min-w-[80px] flex-col items-center justify-center'
+            className='flex min-w-20 flex-col items-center justify-center'
           >
             <Image
               src={s.image}
               alt={`${s.name} logo`}
-              className='size-14 rounded-xl bg-zinc-200 object-contain p-1 lg:size-20 dark:bg-zinc-700'
+              className='h-14 w-14 rounded-xl bg-slate-200 object-contain p-1 lg:h-20 lg:w-20'
             />
             <p className='text-xs lg:text-sm'>{s.name}</p>
           </motion.div>
