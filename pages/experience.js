@@ -13,6 +13,15 @@ import UCalgaryCSSLogo from '@/public/images/experience/ucalgarycss-logo.png';
 import VSALogo from '@/public/images/experience/vsa-logo.png';
 import UBCWasteNautsLogo from '@/public/images/experience/ubcwastenauts-logo.png';
 
+const currentWork = {
+  position: 'Junior Software Engineer',
+  company: 'Ontraccr Technologies',
+  time: 'Dec. 2025 - Present',
+  description: '🏗️ full-stack construction project management app dev',
+  logo: OntraccrLogo,
+  link: 'https://www.ontraccr.com/',
+};
+
 const workExperience = [
   {
     position: 'Frontend Developer',
@@ -112,6 +121,11 @@ export default function Experience() {
   return (
     <main className='mx-8 mt-24 mb-2 flex flex-auto flex-col items-center gap-12 lg:mt-32'>
       <h1>experience 💻</h1>
+
+      <div>
+        <h2 className='relative left-24 mb-4'>current work</h2>
+        <TimelineItem {...currentWork} />
+      </div>
 
       <div className='flex flex-col gap-8 lg:flex-row lg:gap-16'>
         <div className='flex flex-col gap-4'>
